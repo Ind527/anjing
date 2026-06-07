@@ -2000,7 +2000,7 @@ var wc_cart_fragments_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax
 </script><script>
 (function() {
     var origin = "https://pangugreen.com";
-    var allowed = ["https://pangugreen.com/", "https://pangugreen.com/product.html", "https://pangugreen.com/about.html", "https://pangugreen.com/contact.html"];
+    var allowed = ["https://pangugreen.com/", "https://pangugreen.com/product.html", "https://pangugreen.com/about.html", "https://pangugreen.com/contact.html", "https://pangugreen.com/vibrant-epoxy-colored-sand-durable-waterproof-for-crafts-decor.html", "https://pangugreen.com/waterproof-coating-durable-weatherproof-for-indoor-outdoor-use.html"];
     var currentPath = "/product.html";
     var relativeRoot = "./";
 
@@ -2135,4 +2135,43 @@ var wc_cart_fragments_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax
         }, true);
     });
 })();
-</script></body></html>
+</script><script>
+(function() {
+    var URLS = {
+        '9988': 'vibrant-epoxy-colored-sand-durable-waterproof-for-crafts-decor.html',
+        '10028': 'waterproof-coating-durable-weatherproof-for-indoor-outdoor-use.html'
+    };
+
+    // Remove wd-quick-shop class from our two product cards so quickShop.js ignores them
+    function removeQuickShop() {
+        ['9988','10028'].forEach(function(id) {
+            var cards = document.querySelectorAll('[data-id="' + id + '"] .product-element-top');
+            cards.forEach(function(el) {
+                el.classList.remove('wd-quick-shop');
+            });
+        });
+    }
+
+    // Capturing click handler — runs before all jQuery/plugin handlers
+    document.addEventListener('click', function(e) {
+        var card = e.target.closest('[data-id="9988"], [data-id="10028"]');
+        if (!card) return;
+        // Skip utility buttons: compare, wishlist, quick-view, swatch
+        if (e.target.closest('.wd-compare-btn, .wd-wishlist-btn, .quick-view, .wd-swatch')) return;
+        var id = card.getAttribute('data-id');
+        var href = URLS[id];
+        if (href) {
+            e.stopImmediatePropagation();
+            e.preventDefault();
+            window.location.href = href;
+        }
+    }, true);
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', removeQuickShop);
+    } else {
+        removeQuickShop();
+    }
+})();
+</script>
+</body></html>
