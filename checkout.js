@@ -36,23 +36,35 @@
     loadPayPalSDK();
   }
 
+  /* ---- Selected variation (color / size from URL params) ---- */
+  let selectedColor = '';
+  let selectedSize  = '';
+
   /* ---- Detect product from URL params ---- */
   function detectProduct() {
     const params = new URLSearchParams(window.location.search);
     const pid    = params.get('product') || 'waterproof';
     currentProduct = PRODUCTS[pid] || PRODUCTS.waterproof;
-    qty = Math.max(1, parseInt(params.get('qty') || '1', 10));
+    qty           = Math.max(1, parseInt(params.get('qty') || '1', 10));
+    selectedColor = params.get('color') || '';
+    selectedSize  = params.get('size')  || '';
   }
 
   /* ---- Render order summary ---- */
   function renderProduct() {
     const el = document.getElementById('summary-product');
     if (!el || !currentProduct) return;
+    const variantBadges = [
+      selectedColor ? `<span class="ck-variant-badge">Color: ${escHtml(selectedColor.replace(/-/g,' '))}</span>` : '',
+      selectedSize  ? `<span class="ck-variant-badge">Size: ${escHtml(selectedSize)}</span>` : '',
+    ].filter(Boolean).join('');
+
     el.innerHTML = `
       <div class="ck-product-row">
         <img class="ck-product-img" src="${currentProduct.img}" alt="${escHtml(currentProduct.name)}" onerror="this.src='https://pangugreen.com/wp-content/uploads/2025/04/dc1c2d52fc46026b9a9f0064dc759d04.jpg'">
         <div class="ck-product-info">
           <div class="ck-product-name">${escHtml(currentProduct.name)}</div>
+          ${variantBadges ? `<div class="ck-variant-badges">${variantBadges}</div>` : ''}
           <div class="ck-product-price">$${currentProduct.price.toFixed(2)} / unit</div>
         </div>
       </div>`;
@@ -215,6 +227,8 @@
         name:     currentProduct.name,
         price:    currentProduct.price.toFixed(2),
         qty:      qty,
+        color:    selectedColor || undefined,
+        size:     selectedSize  || undefined,
       },
       payment: {
         subtotal: total,

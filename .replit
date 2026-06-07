@@ -37,3 +37,9 @@ externalPort = 80
 [deployment]
 deploymentTarget = "static"
 publicDir = "."
+
+[userenv]
+
+[userenv.shared]
+PAYPAL_CLIENT_ID = "ATiPrTyikwkjQfdjz0Z-jrKZwemldOSYUYumUM1SM_rxpUYSB5KSFhC_Evr4QLmGgR2TZ7mh-lDB3lYg"
+PAYPAL_CLIENT_SECRET = "EBqZtaHMoWSZY99SvSg2KIMLl5WEWnXrvZrS8o7KBZwJe269mE9GxuuZSAdpgrgY-raXVNvFvdERxe5P"
