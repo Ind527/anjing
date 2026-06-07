@@ -2,7 +2,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Contact Us – pangugreen.com</title>
-    <link rel="icon" href="https://pangugreen.com/wp-content/uploads/2026/05/cropped-ico-32x32.jpg" sizes="32x32">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%232d5a27'/%3E%3Cpath d='M16 8c-4 0-7 3-7 7 0 3 1.5 5.5 4 7l1 2h4l1-2c2.5-1.5 4-4 4-7 0-4-3-7-7-7z' fill='%23fff'/%3E%3C/svg%3E">
     <link rel="stylesheet" href="https://pangugreen.com/wp-content/themes/woodmart/css/bootstrap-light.min.css?ver=7.4.3">
     <link rel="stylesheet" href="https://pangugreen.com/wp-content/themes/woodmart/css/parts/base.min.css?ver=7.4.3">
     <link rel="stylesheet" href="https://pangugreen.com/wp-content/themes/woodmart/css/parts/header-base.min.css?ver=7.4.3">
@@ -15,86 +15,138 @@
     <link rel="stylesheet" href="https://pangugreen.com/wp-content/themes/woodmart/css/parts/header-el-search.min.css?ver=7.4.3">
     <link rel="stylesheet" href="https://pangugreen.com/wp-content/themes/woodmart/css/parts/header-el-mobile-nav-dropdown.min.css?ver=7.4.3">
     <link rel="stylesheet" href="https://pangugreen.com/wp-content/themes/woodmart/css/parts/mod-tools.min.css?ver=7.4.3">
-    <link rel="stylesheet" href="https://pangugreen.com/wp-content/themes/woodmart/css/parts/opt-scrolltotop.min.css?ver=7.4.3">
     <link rel="stylesheet" href="https://pangugreen.com/wp-content/uploads/2026/05/xts-header_303964-1778657791.css?ver=7.4.3">
     <link rel="stylesheet" href="https://pangugreen.com/wp-content/uploads/2025/04/xts-theme_settings_default-1744190064.css?ver=7.4.3">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Jost%3A400%2C600%2C700&ver=7.4.3">
     <style>
-        body { font-family: 'Jost', sans-serif; margin: 0; padding: 0; color: #333; }
+        *, *::before, *::after { box-sizing: border-box; }
+        html, body { background: #fff; }
+        body { font-family: 'Jost', sans-serif; margin: 0; padding: 0; color: #333; background: #fff; }
+
+        /* ── HERO ── */
         .page-title-section {
             background: linear-gradient(135deg, #2d5a27 0%, #4a8f40 100%);
-            color: #fff;
-            padding: 60px 30px;
-            text-align: center;
+            color: #fff; padding: 72px 30px; text-align: center;
         }
-        .page-title-section h1 { font-size: 2.5rem; margin: 0 0 10px; font-weight: 700; }
-        .page-title-section p { font-size: 1.1rem; margin: 0; opacity: 0.9; }
-        .contact-wrapper { max-width: 1200px; margin: 60px auto; padding: 0 30px; display: grid; grid-template-columns: 1fr 1.2fr; gap: 60px; }
-        .contact-info h2 { font-size: 1.8rem; font-weight: 700; color: #2d5a27; margin-bottom: 20px; }
-        .contact-info p { font-size: 1rem; line-height: 1.8; color: #555; margin-bottom: 30px; }
-        .info-item { display: flex; align-items: flex-start; gap: 16px; margin-bottom: 24px; }
-        .info-item .icon { width: 48px; height: 48px; background: #2d5a27; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 20px; flex-shrink: 0; }
-        .info-item .detail h4 { font-size: 1rem; font-weight: 700; color: #2d5a27; margin: 0 0 4px; }
-        .info-item .detail p, .info-item .detail a { font-size: 0.95rem; color: #555; margin: 0; text-decoration: none; line-height: 1.6; }
-        .info-item .detail a:hover { color: #2d5a27; }
-        .social-links { display: flex; gap: 12px; margin-top: 30px; }
-        .social-links a { width: 42px; height: 42px; background: #2d5a27; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 18px; text-decoration: none; transition: background 0.2s; }
-        .social-links a:hover { background: #1a3e16; }
-        .contact-form { background: #fff; border: 1px solid #eee; border-radius: 16px; padding: 40px; box-shadow: 0 8px 40px rgba(0,0,0,0.07); }
-        .contact-form h2 { font-size: 1.5rem; font-weight: 700; color: #2d5a27; margin-bottom: 24px; }
+        .page-title-section h1 { font-size: 2.6rem; margin: 0 0 10px; font-weight: 700; letter-spacing: -.5px; }
+        .page-title-section p  { font-size: 1.1rem; margin: 0; opacity: .88; }
+
+        /* ── LAYOUT ── */
+        .contact-wrapper {
+            max-width: 1200px; margin: 64px auto; padding: 0 30px;
+            display: grid; grid-template-columns: 1fr 1.25fr; gap: 56px;
+            background: #fff;
+        }
+
+        /* ── INFO PANEL ── */
+        .contact-info h2 { font-size: 1.85rem; font-weight: 700; color: #2d5a27; margin: 0 0 16px; }
+        .contact-info > p { font-size: 1rem; line-height: 1.82; color: #555; margin-bottom: 32px; }
+        .info-item { display: flex; align-items: flex-start; gap: 16px; margin-bottom: 26px; }
+        .info-icon {
+            width: 48px; height: 48px; flex-shrink: 0;
+            background: #eaf4e7; border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+        }
+        .info-icon svg { width: 22px; height: 22px; }
+        .info-detail h4 { font-size: .95rem; font-weight: 700; color: #2d5a27; margin: 0 0 4px; }
+        .info-detail p, .info-detail a { font-size: .93rem; color: #555; margin: 0; text-decoration: none; line-height: 1.65; }
+        .info-detail a:hover { color: #2d5a27; text-decoration: underline; }
+
+        .social-row { display: flex; gap: 12px; margin-top: 28px; }
+        .social-btn {
+            width: 42px; height: 42px;
+            background: #eaf4e7; border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            text-decoration: none; transition: background .2s;
+        }
+        .social-btn:hover { background: #c8e6c0; }
+        .social-btn svg { width: 18px; height: 18px; }
+
+        /* ── FORM ── */
+        .contact-form {
+            background: #fff;
+            border: 1.5px solid #e0edd9;
+            border-radius: 16px;
+            padding: 40px 36px;
+            box-shadow: 0 6px 36px rgba(45,90,39,.07);
+        }
+        .contact-form h2 { font-size: 1.45rem; font-weight: 700; color: #2d5a27; margin: 0 0 28px; }
         .form-row { margin-bottom: 20px; }
-        .form-row label { display: block; font-size: 0.9rem; font-weight: 600; color: #444; margin-bottom: 6px; }
+        .form-row label { display: block; font-size: .88rem; font-weight: 600; color: #444; margin-bottom: 6px; }
         .form-row input, .form-row select, .form-row textarea {
-            width: 100%;
-            padding: 12px 16px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            font-size: 0.95rem;
-            font-family: 'Jost', sans-serif;
-            color: #333;
-            box-sizing: border-box;
-            transition: border-color 0.2s;
-            outline: none;
+            width: 100%; padding: 11px 14px;
+            border: 1.5px solid #d8e8d4; border-radius: 8px;
+            font-size: .95rem; font-family: inherit; color: #333;
+            outline: none; transition: border-color .18s; background: #fff;
         }
         .form-row input:focus, .form-row select:focus, .form-row textarea:focus { border-color: #2d5a27; }
-        .form-row textarea { height: 140px; resize: vertical; }
-        .form-row-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+        .form-row textarea { height: 130px; resize: vertical; }
+        .form-2col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
         .btn-submit {
-            background: #2d5a27;
-            color: #fff;
-            border: none;
-            padding: 14px 36px;
-            border-radius: 8px;
-            font-size: 1rem;
-            font-weight: 600;
-            font-family: 'Jost', sans-serif;
-            cursor: pointer;
-            width: 100%;
-            transition: background 0.2s;
+            background: #2d5a27; color: #fff; border: none;
+            padding: 13px 0; border-radius: 8px;
+            font-size: 1rem; font-weight: 600; font-family: inherit;
+            cursor: pointer; width: 100%; transition: background .2s; letter-spacing: .3px;
         }
-        .btn-submit:hover { background: #1a3e16; }
-        .success-msg { display: none; background: #e8f5e9; border: 1px solid #a5d6a7; color: #2d5a27; padding: 14px 20px; border-radius: 8px; text-align: center; font-weight: 600; margin-top: 16px; }
-        .map-section { max-width: 1200px; margin: 0 auto 60px; padding: 0 30px; }
-        .map-section h2 { font-size: 1.5rem; font-weight: 700; color: #2d5a27; margin-bottom: 20px; }
-        .map-placeholder { background: #f0f4f0; border-radius: 12px; height: 320px; display: flex; align-items: center; justify-content: center; flex-direction: column; color: #4a8f40; border: 2px dashed #b0d0a8; }
-        .map-placeholder .map-icon { font-size: 3rem; margin-bottom: 12px; }
-        .map-placeholder p { font-size: 1rem; color: #666; margin: 0; }
-        @media (max-width: 768px) {
-            .contact-wrapper { grid-template-columns: 1fr; gap: 40px; }
-            .form-row-2 { grid-template-columns: 1fr; }
-            .page-title-section h1 { font-size: 1.8rem; }
-            .contact-form { padding: 24px; }
+        .btn-submit:hover { background: #1e3d1b; }
+        .success-msg {
+            display: none; margin-top: 16px;
+            background: #eaf4e7; border: 1.5px solid #a5d6a7;
+            color: #2d5a27; padding: 14px 18px;
+            border-radius: 8px; text-align: center; font-weight: 600; font-size: .95rem;
         }
+
+        /* ── MAP PLACEHOLDER ── */
+        .map-section { max-width: 1200px; margin: 0 auto 64px; padding: 0 30px; background: #fff; }
+        .map-section h2 { font-size: 1.45rem; font-weight: 700; color: #2d5a27; margin-bottom: 18px; }
+        .map-box {
+            background: #f4f8f3; border-radius: 14px; height: 300px;
+            display: flex; align-items: center; justify-content: center; flex-direction: column;
+            border: 2px dashed #b8d9b0; gap: 12px;
+        }
+        .map-box svg { width: 40px; height: 40px; }
+        .map-box p { font-size: .95rem; color: #6d9e67; margin: 0; }
+
+        /* ── FOOTER ── */
+        .site-footer {
+            background: #f4f8f3;
+            border-top: 2px solid #d6ebd0;
+            padding: 48px 30px 32px;
+        }
+        .footer-inner { max-width: 1200px; margin: 0 auto; text-align: center; }
+        .footer-inner img { height: 44px; margin-bottom: 22px; }
+        .footer-links { display: flex; justify-content: center; gap: 32px; flex-wrap: wrap; margin-bottom: 22px; }
+        .footer-links a { color: #3a6e34; text-decoration: none; font-size: 14px; font-weight: 500; }
+        .footer-links a:hover { color: #2d5a27; text-decoration: underline; }
+        .footer-links a.active { color: #2d5a27; font-weight: 700; }
+        .footer-copy { color: #8fac8a; font-size: 13px; margin: 0; }
+
+        @media (max-width: 900px) {
+            .contact-wrapper { grid-template-columns: 1fr; gap: 36px; }
+            .form-2col { grid-template-columns: 1fr; }
+            .page-title-section h1 { font-size: 1.9rem; }
+            .contact-form { padding: 26px 20px; }
+        }
+
+        /* mobile nav */
+        .mobile-menu-toggle { background: none; border: none; cursor: pointer; padding: 10px; color: #2d5a27; }
+        #mobile-nav { display: none; position: fixed; top: 0; left: 0; width: 78%; max-width: 290px; height: 100%; background: #fff; z-index: 9999; box-shadow: 4px 0 28px rgba(0,0,0,0.18); padding: 24px 20px; overflow-y: auto; }
+        #mobile-nav.open { display: block; }
+        #mobile-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.38); z-index: 9998; }
+        #mobile-overlay.open { display: block; }
+        #mobile-nav ul { list-style: none; padding: 0; margin: 22px 0 0; }
+        #mobile-nav ul li a { display: block; padding: 13px 0; border-bottom: 1px solid #eee; font-size: 15px; color: #333; text-decoration: none; font-weight: 500; }
+        #mobile-nav ul li a:hover, #mobile-nav ul li a.active { color: #2d5a27; }
+        #mobile-nav .close-btn { background: none; border: none; font-size: 22px; cursor: pointer; float: right; color: #555; }
     </style>
-    <script type="text/javascript" src="https://pangugreen.com/wp-includes/js/jquery/jquery.min.js?ver=3.7.1"></script>
-    <script type="text/javascript" src="https://pangugreen.com/wp-content/themes/woodmart/js/libs/device.min.js?ver=7.4.3"></script>
-    <script type="text/javascript" src="https://pangugreen.com/wp-content/themes/woodmart/js/scripts/global/scrollBar.min.js?ver=7.4.3"></script>
+    <script src="https://pangugreen.com/wp-includes/js/jquery/jquery.min.js?ver=3.7.1"></script>
+    <script src="https://pangugreen.com/wp-content/themes/woodmart/js/libs/device.min.js?ver=7.4.3"></script>
+    <script src="https://pangugreen.com/wp-content/themes/woodmart/js/scripts/global/scrollBar.min.js?ver=7.4.3"></script>
 </head>
 <body class="page-template-default page theme-woodmart wrapper-custom">
-
 <div class="website-wrapper">
 
-<!-- HEADER -->
+<!-- ════════════ HEADER ════════════ -->
 <div id="whb-header" class="whb-header whb-sticky-enabled whb-main-header">
     <div class="whb-main-header">
         <div class="whb-row whb-general-header whb-flex-row">
@@ -110,42 +162,28 @@
                     </div>
 
                     <div class="whb-column whb-col-center whb-visible-lg">
-                        <div class="wd-header-nav wd-header-main-nav text-left wd-design-1" role="navigation" aria-label="Main navigation">
+                        <nav class="wd-header-nav wd-header-main-nav text-left wd-design-1" aria-label="Main navigation">
                             <ul class="menu wd-nav wd-nav-main wd-style-default wd-gap-m">
-                                <li class="menu-item item-level-0 menu-simple-dropdown wd-event-hover"><a href="./index.html" class="woodmart-nav-link" data-nce-hover-nav="true"><span class="nav-link-text">Home</span></a></li>
-                                <li class="menu-item item-level-0 menu-simple-dropdown wd-event-hover"><a href="./product.html" class="woodmart-nav-link" data-nce-hover-nav="true"><span class="nav-link-text">Products</span></a></li>
-                                <li class="menu-item item-level-0 menu-simple-dropdown wd-event-hover"><a href="javascript:void(0)" class="woodmart-nav-link" data-nce-hover-nav="true" style="cursor:default;"><span class="nav-link-text">Blog</span></a></li>
-                                <li class="menu-item item-level-0 menu-simple-dropdown wd-event-hover"><a href="./about.html" class="woodmart-nav-link" data-nce-hover-nav="true"><span class="nav-link-text">About Us</span></a></li>
-                                <li class="menu-item current-menu-item item-level-0 menu-simple-dropdown wd-event-hover"><a href="./contact.html" class="woodmart-nav-link" data-nce-hover-nav="true"><span class="nav-link-text">Contact Us</span></a></li>
+                                <li class="menu-item item-level-0 wd-event-hover"><a href="./index.html" class="woodmart-nav-link"><span class="nav-link-text">Home</span></a></li>
+                                <li class="menu-item item-level-0 wd-event-hover"><a href="./product.html" class="woodmart-nav-link"><span class="nav-link-text">Products</span></a></li>
+                                <li class="menu-item item-level-0 wd-event-hover"><a href="javascript:void(0)" class="woodmart-nav-link" style="cursor:default;"><span class="nav-link-text">Blog</span></a></li>
+                                <li class="menu-item item-level-0 wd-event-hover"><a href="./about.html" class="woodmart-nav-link"><span class="nav-link-text">About Us</span></a></li>
+                                <li class="menu-item current-menu-item item-level-0 wd-event-hover"><a href="./contact.html" class="woodmart-nav-link"><span class="nav-link-text">Contact Us</span></a></li>
                             </ul>
-                        </div>
+                        </nav>
                     </div>
 
                     <div class="whb-column whb-col-right whb-visible-lg">
-                        <a href="javascript:void(0)" style="cursor:default; font-size:14px; color:#777; text-decoration:none;">Login / Register</a>
+                        <span style="font-size:14px; color:#999;">Login / Register</span>
                     </div>
 
-                    <!-- Mobile Header -->
                     <div class="whb-column whb-mobile-left whb-hidden-lg">
-                        <div class="site-logo">
-                            <a href="./index.html">
-                                <img src="https://pangugreen.com/wp-content/uploads/2026/05/Golden-Bean-Logo.svg" alt="pangugreen.com" width="130">
-                            </a>
-                        </div>
+                        <a href="./index.html"><img src="https://pangugreen.com/wp-content/uploads/2026/05/Golden-Bean-Logo.svg" alt="pangugreen.com" width="130"></a>
                     </div>
                     <div class="whb-column whb-mobile-right whb-hidden-lg">
-                        <style>
-                            .mobile-menu-toggle { background: none; border: none; cursor: pointer; padding: 10px; font-size: 22px; }
-                            #mobile-nav { display: none; position: fixed; top: 0; left: 0; width: 80%; max-width: 300px; height: 100%; background: #fff; z-index: 9999; box-shadow: 4px 0 20px rgba(0,0,0,0.2); padding: 20px; box-sizing: border-box; overflow-y: auto; }
-                            #mobile-nav.open { display: block; }
-                            #mobile-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.4); z-index: 9998; }
-                            #mobile-overlay.open { display: block; }
-                            #mobile-nav ul { list-style: none; padding: 0; margin: 20px 0 0; }
-                            #mobile-nav ul li a { display: block; padding: 14px 0; border-bottom: 1px solid #eee; font-size: 15px; color: #333; text-decoration: none; font-weight: 500; }
-                            #mobile-nav ul li a:hover { color: #2d5a27; }
-                            #mobile-nav .close-btn { background: none; border: none; font-size: 24px; cursor: pointer; float: right; }
-                        </style>
-                        <button class="mobile-menu-toggle" onclick="document.getElementById('mobile-nav').classList.add('open');document.getElementById('mobile-overlay').classList.add('open');">☰</button>
+                        <button class="mobile-menu-toggle" onclick="document.getElementById('mobile-nav').classList.add('open');document.getElementById('mobile-overlay').classList.add('open');" aria-label="Open menu">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2d5a27" stroke-width="2.2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+                        </button>
                     </div>
 
                 </div>
@@ -154,99 +192,118 @@
     </div>
 </div>
 
-<!-- Mobile Nav Drawer -->
 <div id="mobile-overlay" onclick="document.getElementById('mobile-nav').classList.remove('open');this.classList.remove('open');"></div>
 <div id="mobile-nav">
-    <button class="close-btn" onclick="document.getElementById('mobile-nav').classList.remove('open');document.getElementById('mobile-overlay').classList.remove('open');">✕</button>
-    <a href="./index.html"><img src="https://pangugreen.com/wp-content/uploads/2026/05/Golden-Bean-Logo.svg" alt="Logo" width="120" style="margin-top:10px;"></a>
+    <button class="close-btn" onclick="document.getElementById('mobile-nav').classList.remove('open');document.getElementById('mobile-overlay').classList.remove('open');">&#x2715;</button>
+    <a href="./index.html"><img src="https://pangugreen.com/wp-content/uploads/2026/05/Golden-Bean-Logo.svg" alt="Logo" width="120" style="margin-top:12px;display:block;"></a>
     <ul>
         <li><a href="./index.html">Home</a></li>
         <li><a href="./product.html">Products</a></li>
-        <li><a href="javascript:void(0)" style="color:#aaa;cursor:default;">Blog</a></li>
+        <li><a href="javascript:void(0)" style="color:#bbb;cursor:default;">Blog</a></li>
         <li><a href="./about.html">About Us</a></li>
-        <li><a href="./contact.html" style="color:#2d5a27;font-weight:700;">Contact Us</a></li>
+        <li><a href="./contact.html" class="active">Contact Us</a></li>
     </ul>
 </div>
 
-<!-- PAGE TITLE -->
+<!-- ════════════ HERO ════════════ -->
 <div class="page-title-section">
     <h1>Contact Us</h1>
     <p>We'd love to hear from you — get in touch with our team</p>
 </div>
 
-<!-- CONTACT CONTENT -->
+<!-- ════════════ CONTACT CONTENT ════════════ -->
 <div class="contact-wrapper">
 
-    <!-- Contact Info -->
+    <!-- INFO -->
     <div class="contact-info">
         <h2>Get In Touch</h2>
         <p>Whether you have questions about our products, need technical advice, or want to become a distributor — our team is ready to help.</p>
 
         <div class="info-item">
-            <div class="icon">📍</div>
-            <div class="detail">
+            <div class="info-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#2d5a27" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 1 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div class="info-detail">
                 <h4>Address</h4>
                 <p>Golden Bean Industrial Zone,<br>Guangdong Province, China</p>
             </div>
         </div>
 
         <div class="info-item">
-            <div class="icon">📞</div>
-            <div class="detail">
+            <div class="info-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#2d5a27" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.4 2 2 0 0 1 3.6 1.22h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.78a16 16 0 0 0 6.29 6.29l.95-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </div>
+            <div class="info-detail">
                 <h4>Phone / WhatsApp</h4>
                 <a href="https://wa.me/8613800000000" target="_blank">+86 138 0000 0000</a>
             </div>
         </div>
 
         <div class="info-item">
-            <div class="icon">✉️</div>
-            <div class="detail">
+            <div class="info-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#2d5a27" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div class="info-detail">
                 <h4>Email</h4>
                 <a href="mailto:info@pangugreen.com">info@pangugreen.com</a>
             </div>
         </div>
 
         <div class="info-item">
-            <div class="icon">🕐</div>
-            <div class="detail">
+            <div class="info-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#2d5a27" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <div class="info-detail">
                 <h4>Business Hours</h4>
                 <p>Mon – Fri: 8:00 AM – 6:00 PM (CST)<br>Sat: 9:00 AM – 3:00 PM</p>
             </div>
         </div>
 
-        <div class="social-links">
-            <a href="javascript:void(0)" title="WhatsApp">💬</a>
-            <a href="javascript:void(0)" title="Facebook">f</a>
-            <a href="javascript:void(0)" title="Instagram">📸</a>
-            <a href="javascript:void(0)" title="LinkedIn">in</a>
+        <div class="social-row">
+            <!-- WhatsApp -->
+            <a href="https://wa.me/8613800000000" target="_blank" class="social-btn" title="WhatsApp">
+                <svg viewBox="0 0 24 24" fill="#2d5a27"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M11.928 0C5.338 0 0 5.338 0 11.928c0 2.115.556 4.1 1.528 5.82L0 24l6.418-1.501A11.9 11.9 0 0 0 11.928 24C18.517 24 24 18.518 24 11.928 24 5.338 18.517 0 11.928 0zm0 21.818a9.878 9.878 0 0 1-5.032-1.37l-.361-.214-3.741.981.998-3.648-.235-.374a9.886 9.886 0 0 1-1.516-5.265c0-5.455 4.44-9.895 9.895-9.895s9.895 4.44 9.895 9.895-4.44 9.89-9.903 9.89z"/></svg>
+            </a>
+            <!-- Facebook -->
+            <a href="javascript:void(0)" class="social-btn" title="Facebook">
+                <svg viewBox="0 0 24 24" fill="#2d5a27"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <!-- Instagram -->
+            <a href="javascript:void(0)" class="social-btn" title="Instagram">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#2d5a27" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="#2d5a27" stroke="none"/></svg>
+            </a>
+            <!-- LinkedIn -->
+            <a href="javascript:void(0)" class="social-btn" title="LinkedIn">
+                <svg viewBox="0 0 24 24" fill="#2d5a27"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
         </div>
     </div>
 
-    <!-- Contact Form -->
+    <!-- FORM -->
     <div class="contact-form">
         <h2>Send Us a Message</h2>
         <form id="contactForm" onsubmit="handleSubmit(event)">
-            <div class="form-row form-row-2">
+            <div class="form-2col">
                 <div class="form-row">
                     <label for="fname">First Name *</label>
-                    <input type="text" id="fname" name="fname" placeholder="John" required>
+                    <input type="text" id="fname" placeholder="John" required>
                 </div>
                 <div class="form-row">
                     <label for="lname">Last Name *</label>
-                    <input type="text" id="lname" name="lname" placeholder="Doe" required>
+                    <input type="text" id="lname" placeholder="Doe" required>
                 </div>
             </div>
             <div class="form-row">
                 <label for="email">Email Address *</label>
-                <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                <input type="email" id="email" placeholder="john@example.com" required>
             </div>
             <div class="form-row">
                 <label for="phone">Phone / WhatsApp</label>
-                <input type="tel" id="phone" name="phone" placeholder="+1 234 567 8900">
+                <input type="tel" id="phone" placeholder="+1 234 567 8900">
             </div>
             <div class="form-row">
                 <label for="subject">Subject *</label>
-                <select id="subject" name="subject" required>
+                <select id="subject" required>
                     <option value="">— Select a topic —</option>
                     <option value="product">Product Inquiry</option>
                     <option value="distributor">Become a Distributor</option>
@@ -257,35 +314,40 @@
             </div>
             <div class="form-row">
                 <label for="message">Message *</label>
-                <textarea id="message" name="message" placeholder="Tell us how we can help you..." required></textarea>
+                <textarea id="message" placeholder="Tell us how we can help you..." required></textarea>
             </div>
             <button type="submit" class="btn-submit">Send Message</button>
-            <div class="success-msg" id="successMsg">✅ Your message has been sent! We'll get back to you within 24 hours.</div>
+            <div class="success-msg" id="successMsg">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2d5a27" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;margin-right:6px;"><polyline points="20 6 9 17 4 12"/></svg>
+                Your message has been sent! We will get back to you within 24 hours.
+            </div>
         </form>
     </div>
 
-</div>
+</div><!-- /.contact-wrapper -->
 
-<!-- MAP PLACEHOLDER -->
+<!-- ════════════ MAP ════════════ -->
 <div class="map-section">
     <h2>Find Us</h2>
-    <div class="map-placeholder">
-        <div class="map-icon">🗺️</div>
+    <div class="map-box">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#4a8f40" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 1 1 18 0z"/><circle cx="12" cy="10" r="3"/>
+        </svg>
         <p>Golden Bean Industrial Zone, Guangdong Province, China</p>
     </div>
 </div>
 
-<!-- FOOTER -->
-<footer class="footer-container color-scheme-light" style="background:#1a2e1a; color:#ccc; padding:40px 30px; text-align:center;">
-    <div style="max-width:1200px; margin:0 auto;">
-        <img src="https://pangugreen.com/wp-content/uploads/2026/05/Golden-Bean-Logo.svg" alt="Golden Bean" width="140" style="filter:brightness(0) invert(1); margin-bottom:20px;">
-        <div style="margin:20px 0; display:flex; justify-content:center; gap:30px; flex-wrap:wrap;">
-            <a href="./index.html" style="color:#aaa; text-decoration:none; font-size:14px;">Home</a>
-            <a href="./product.html" style="color:#aaa; text-decoration:none; font-size:14px;">Products</a>
-            <a href="./about.html" style="color:#aaa; text-decoration:none; font-size:14px;">About Us</a>
-            <a href="./contact.html" style="color:#fff; text-decoration:none; font-size:14px; font-weight:600;">Contact Us</a>
+<!-- ════════════ FOOTER ════════════ -->
+<footer class="site-footer">
+    <div class="footer-inner">
+        <img src="https://pangugreen.com/wp-content/uploads/2026/05/Golden-Bean-Logo.svg" alt="Golden Bean">
+        <div class="footer-links">
+            <a href="./index.html">Home</a>
+            <a href="./product.html">Products</a>
+            <a href="./about.html">About Us</a>
+            <a href="./contact.html" class="active">Contact Us</a>
         </div>
-        <p style="color:#666; font-size:13px; margin:0;">© 2026 pangugreen.com — All rights reserved.</p>
+        <p class="footer-copy">&copy; 2026 pangugreen.com &mdash; All rights reserved.</p>
     </div>
 </footer>
 
@@ -311,71 +373,45 @@ function handleSubmit(e) {
     var currentPath = "/contact.html";
     var relativeRoot = "./";
 
-    function normalizePath(pathname) {
-        var withoutIndex = pathname.replace(/\/index\.html$/i, "");
-        var withoutTrailingSlash = withoutIndex.replace(/\/$/, "");
-        return withoutTrailingSlash || "/";
+    function normalizePath(p) {
+        return (p.replace(/\/index\.html$/i,"").replace(/\/$/,"")) || "/";
     }
-
     function buildExportHref(url) {
         var clean = normalizePath(url.pathname);
-        if (clean === currentPath && url.hash) { return url.hash; }
-        var targetPath;
-        if (clean === "/") {
-            targetPath = "index.html";
-        } else if (/\.html$/i.test(clean)) {
-            targetPath = clean.substring(1);
-        } else {
-            targetPath = clean.substring(1) + "/index.html";
-        }
-        return relativeRoot + targetPath + (url.hash || "");
+        if (clean === currentPath && url.hash) return url.hash;
+        var t = clean === "/" ? "index.html" : /\.html$/i.test(clean) ? clean.substring(1) : clean.substring(1)+"/index.html";
+        return relativeRoot + t + (url.hash || "");
     }
-
-    function neutralizeLink(a) {
+    function neutralize(a) {
         if (!a) return;
-        var rawHref = a.getAttribute("href");
-        if (!rawHref) return;
-        if (a.getAttribute("data-nce-checked") === rawHref) return;
-        a.setAttribute("data-nce-checked", rawHref);
-        if (rawHref.indexOf("#") === 0 || rawHref.indexOf("javascript:") === 0 || rawHref.indexOf("mailto:") === 0 || rawHref.indexOf("tel:") === 0) return;
+        var h = a.getAttribute("href");
+        if (!h || a.getAttribute("data-nce-checked") === h) return;
+        a.setAttribute("data-nce-checked", h);
+        if (/^(#|javascript:|mailto:|tel:)/.test(h)) return;
         try {
-            var url = new URL(rawHref, origin + "/");
+            var url = new URL(h, origin + "/");
             if (url.origin === origin) {
-                var clean = normalizePath(url.pathname);
-                var full = url.origin + clean;
-                var isExported = allowed.indexOf(full) !== -1;
-                if (!isExported) {
-                    a.setAttribute("href", "javascript:void(0)");
-                    a.removeAttribute("target");
-                    a.style.cursor = "default";
+                var full = url.origin + normalizePath(url.pathname);
+                if (allowed.indexOf(full) === -1) {
+                    a.href = "javascript:void(0)"; a.removeAttribute("target"); a.style.cursor = "default";
                 } else {
-                    a.setAttribute("href", buildExportHref(url));
-                    if (a.style.cursor === "default") { a.style.cursor = ""; }
+                    a.href = buildExportHref(url);
+                    if (a.style.cursor === "default") a.style.cursor = "";
                 }
             } else {
-                if (a.getAttribute("target") !== "_blank") { a.setAttribute("target", "_top"); }
+                if (a.getAttribute("target") !== "_blank") a.setAttribute("target","_top");
             }
-        } catch(err) {}
+        } catch(e) {}
     }
-
-    document.querySelectorAll("a[href]").forEach(neutralizeLink);
-
-    var events = ["click", "mousedown", "mouseup", "pointerdown", "pointerup", "touchstart", "touchend"];
-    events.forEach(function(ev) {
+    document.querySelectorAll("a[href]").forEach(neutralize);
+    ["click","mousedown","mouseup","pointerdown","pointerup","touchstart","touchend"].forEach(function(ev) {
         document.addEventListener(ev, function(e) {
             var a = e.target.closest("a");
-            if (!a) return;
-            var rawHref = a.getAttribute("href");
-            if (!rawHref || rawHref.indexOf("#") === 0) return;
-            if (rawHref.indexOf("javascript:void(0)") !== -1) {
-                e.preventDefault();
-                e.stopPropagation();
-                e.stopImmediatePropagation();
-                return;
+            if (a && a.getAttribute("href") === "javascript:void(0)") {
+                e.preventDefault(); e.stopPropagation(); e.stopImmediatePropagation();
             }
         });
     });
 })();
 </script>
-
 </body></html>
