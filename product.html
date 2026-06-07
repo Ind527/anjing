@@ -2016,7 +2016,14 @@ var wc_cart_fragments_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax
             return url.hash;
         }
 
-        var targetPath = clean === "/" ? "index.html" : clean.substring(1) + "/index.html";
+        var targetPath;
+        if (clean === "/") {
+            targetPath = "index.html";
+        } else if (/\.html$/i.test(clean)) {
+            targetPath = clean.substring(1);
+        } else {
+            targetPath = clean.substring(1) + "/index.html";
+        }
         return relativeRoot + targetPath + (url.hash || "");
     }
     
