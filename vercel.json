@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "rewrites": [
+    { "source": "/api/(.*)", "destination": "/api/$1" }
+  ],
+  "routes": [
+    { "src": "/api/(.*)", "dest": "/api/$1" },
+    { "src": "/(.*)", "dest": "/$1" }
+  ],
+  "env": {
+    "PAYPAL_CLIENT_ID":              "@paypal_client_id",
+    "PAYPAL_CLIENT_SECRET":          "@paypal_client_secret",
+    "EMAILJS_PUBLIC_KEY":            "@emailjs_public_key",
+    "EMAILJS_SERVICE_ID":            "@emailjs_service_id",
+    "EMAILJS_TEMPLATE_ID":           "@emailjs_template_id",
+    "EMAILJS_CUSTOMER_TEMPLATE_ID":  "@emailjs_customer_template_id"
+  }
+}

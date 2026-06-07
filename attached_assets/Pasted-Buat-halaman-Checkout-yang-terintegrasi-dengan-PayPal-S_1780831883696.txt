@@ -1,0 +1,167 @@
+Buat halaman Checkout yang terintegrasi dengan PayPal Sandbox dan mengikuti desain website yang sudah ada 100%. Jangan membuat desain baru. Semua warna, font, spacing, navbar, footer, tombol, card, animasi, dan gaya visual harus konsisten dengan website saat ini sehingga checkout terlihat sebagai bagian asli dari website.
+
+FITUR CHECKOUT:
+
+1. Formulir Customer Information
+
+* Full Name
+* Email Address
+* Phone Number
+* Company (Optional)
+* Country
+* Street Address
+* City
+* State/Province
+* ZIP/Postal Code
+* Order Notes (Optional)
+
+2. Order Summary
+   Tampilkan:
+
+* Product Image
+* Product Name
+* Product Price
+* Quantity Selector
+* Subtotal
+* Shipping Cost
+
+Shipping Cost:
+
+* FREE SHIPPING
+* Tampilkan tulisan:
+  "Free Worldwide Shipping"
+
+3. Total Order
+   Hitung otomatis:
+   Total = Product Price × Quantity
+
+Karena shipping gratis maka:
+Total = Subtotal
+
+4. Validasi Form
+
+* Semua field wajib harus diisi
+* Email harus valid
+* Nomor telepon harus valid
+* Quantity minimal 1
+
+5. Integrasi PayPal Sandbox
+
+Gunakan PayPal Sandbox untuk simulasi pembayaran.
+
+Jangan hardcode credential.
+
+Gunakan Environment Variables:
+
+PAYPAL_CLIENT_ID
+PAYPAL_CLIENT_SECRET
+
+Buat endpoint backend yang aman agar Client Secret tidak pernah terlihat di browser.
+
+Contoh struktur:
+
+/api/create-order.js
+/api/capture-order.js
+
+6. Alur Pembayaran
+
+Step 1:
+User mengisi formulir checkout.
+
+Step 2:
+User menekan tombol "Proceed to Payment".
+
+Step 3:
+PayPal Sandbox Button muncul.
+
+Step 4:
+User melakukan pembayaran simulasi.
+
+Step 5:
+Jika pembayaran berhasil:
+
+* Simpan data order
+* Simpan Transaction ID
+* Simpan Customer Information
+* Simpan Product Information
+* Simpan Amount Paid
+
+Step 6:
+Redirect ke halaman success.html
+
+7. EmailJS Integration
+
+Gunakan EmailJS.
+
+Setelah pembayaran berhasil:
+
+Kirim email otomatis ke admin berisi:
+
+* Customer Name
+* Email
+* Phone Number
+* Company
+* Country
+* Shipping Address
+* Product Name
+* Quantity
+* Total Price
+* Transaction ID
+* Payment Status
+* Order Date
+
+Kirim juga email konfirmasi ke customer yang berisi:
+
+* Thank You Message
+* Order Details
+* Transaction ID
+* Product Purchased
+* Quantity
+* Total Paid
+
+Gunakan Environment Variables untuk:
+
+EMAILJS_PUBLIC_KEY
+EMAILJS_SERVICE_ID
+EMAILJS_TEMPLATE_ID
+
+8. Desain
+
+Checkout harus mengikuti desain website yang ada secara otomatis.
+
+Jangan menggunakan tema atau warna baru.
+
+Gunakan:
+
+* Font yang sama dengan website
+* Navbar yang sama
+* Footer yang sama
+* Responsive Mobile
+* Responsive Tablet
+* Responsive Desktop
+
+9. File Structure
+
+checkout.html
+checkout.css
+checkout.js
+
+success.html
+success.css
+
+/api/create-order.js
+/api/capture-order.js
+
+10. Output
+
+Berikan kode lengkap yang siap deploy ke Vercel.
+
+Pastikan:
+
+* PayPal Sandbox berfungsi
+* Free Shipping
+* EmailJS mengirim data order
+* Desain identik dengan website yang sudah ada
+* Mobile friendly
+* Tidak ada error console
+* Semua data checkout tersimpan dan terkirim setelah pembayaran berhasil.

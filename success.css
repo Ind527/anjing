@@ -1,0 +1,156 @@
+/* =====================================================
+   SUCCESS PAGE — matches pangugreen.com design system
+   ===================================================== */
+
+:root {
+  --ck-primary:     #2d5a27;
+  --ck-primary-dk:  #1e3d1b;
+  --ck-primary-lt:  #f0f7ee;
+  --ck-border:      #e8f0e6;
+  --ck-font:        'Jost', Roboto, sans-serif;
+}
+
+.success-page {
+  background: #f6faf5;
+  min-height: 70vh;
+  padding: 60px 0 100px;
+  font-family: var(--ck-font);
+}
+
+.success-page .container {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.success-card {
+  background: #fff;
+  border: 1.5px solid var(--ck-border);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(45,90,39,.09);
+  padding: 50px 48px;
+  text-align: center;
+}
+
+.success-icon {
+  width: 80px;
+  height: 80px;
+  background: var(--ck-primary-lt);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 24px;
+}
+.success-icon svg { color: var(--ck-primary); }
+
+.success-title {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--ck-primary);
+  margin: 0 0 10px;
+}
+
+.success-subtitle {
+  font-size: 15px;
+  color: #555;
+  margin: 0 0 32px;
+  line-height: 1.6;
+}
+
+.success-txn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--ck-primary-lt);
+  border: 1px solid #c8e4c3;
+  border-radius: 8px;
+  padding: 10px 18px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--ck-primary);
+  margin-bottom: 32px;
+  word-break: break-all;
+}
+
+.success-details {
+  text-align: left;
+  border: 1.5px solid var(--ck-border);
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 32px;
+}
+
+.success-detail-title {
+  background: var(--ck-primary-lt);
+  padding: 12px 18px;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--ck-primary);
+  border-bottom: 1px solid var(--ck-border);
+}
+
+.success-detail-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 18px;
+  font-size: 13px;
+  border-bottom: 1px solid #f0f0f0;
+}
+.success-detail-row:last-child { border-bottom: none; }
+.success-detail-row .label { color: #777; }
+.success-detail-row .value { font-weight: 600; color: #222; text-align: right; max-width: 60%; }
+
+.success-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-home {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 28px;
+  background: var(--ck-primary);
+  color: #fff;
+  font-family: var(--ck-font);
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 7px;
+  text-decoration: none;
+  transition: background .2s;
+}
+.btn-home:hover { background: var(--ck-primary-dk); }
+
+.btn-products {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 28px;
+  background: var(--ck-primary-lt);
+  color: var(--ck-primary);
+  font-family: var(--ck-font);
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 7px;
+  text-decoration: none;
+  border: 1.5px solid #c8e4c3;
+  transition: background .2s;
+}
+.btn-products:hover { background: #dcefd9; }
+
+.email-note {
+  font-size: 12px;
+  color: #888;
+  margin-top: 20px;
+  line-height: 1.6;
+}
+
+@media (max-width: 600px) {
+  .success-card { padding: 30px 20px; }
+  .success-title { font-size: 22px; }
+  .success-detail-row { flex-direction: column; gap: 2px; }
+  .success-detail-row .value { text-align: left; max-width: 100%; }
+}

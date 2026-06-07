@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Order Confirmed — pangugreen.com</title>
+  <meta name="robots" content="noindex,nofollow">
+
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://pangugreen.com/wp-content/themes/woodmart/css/bootstrap-light.min.css?ver=7.4.3">
+  <link rel="stylesheet" href="https://pangugreen.com/wp-content/themes/woodmart/css/parts/base.min.css?ver=7.4.3">
+  <link rel="stylesheet" href="https://pangugreen.com/wp-content/uploads/elementor/css/custom-frontend.min.css?ver=1778244504">
+
+  <link rel="stylesheet" href="success.css">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body { margin: 0; font-family: 'Jost', Roboto, sans-serif; background: #f6faf5; }
+    img  { max-width: 100%; }
+  </style>
+</head>
+<body class="woodmart-theme">
+
+<!-- ===================== NAVBAR ===================== -->
+<div class="website-wrapper">
+  <header class="whb-header whb-header_439246 whb-sticky-shadow whb-scroll-slide whb-sticky-real">
+    <div class="whb-main-header">
+      <div class="whb-row whb-general-header whb-sticky-row whb-without-bg whb-without-border whb-color-dark whb-flex-flex-middle">
+        <div class="container">
+          <div class="whb-flex-row whb-general-header-inner">
+            <!-- Logo desktop -->
+            <div class="whb-column whb-col-left whb-visible-lg">
+              <div class="site-logo">
+                <a href="./index.html" class="wd-logo wd-main-logo" rel="home" aria-label="Home">
+                  <img src="https://pangugreen.com/wp-content/uploads/2026/05/logo.webp" style="max-width:180px;" alt="pangugreen.com" loading="lazy">
+                </a>
+              </div>
+            </div>
+            <!-- Nav desktop -->
+            <div class="whb-column whb-col-center whb-visible-lg">
+              <div class="wd-header-nav wd-header-main-nav text-left wd-design-1" role="navigation">
+                <ul class="menu wd-nav wd-nav-main wd-style-default wd-gap-m">
+                  <li class="menu-item item-level-0 menu-simple-dropdown wd-event-hover"><a href="./index.html" class="woodmart-nav-link"><span class="nav-link-text">Home</span></a></li>
+                  <li class="menu-item item-level-0 menu-simple-dropdown wd-event-hover"><a href="./product.html" class="woodmart-nav-link"><span class="nav-link-text">Products</span></a></li>
+                  <li class="menu-item item-level-0 menu-simple-dropdown wd-event-hover"><a href="./about.html" class="woodmart-nav-link"><span class="nav-link-text">About Us</span></a></li>
+                  <li class="menu-item item-level-0 menu-simple-dropdown wd-event-hover"><a href="./contact.html" class="woodmart-nav-link"><span class="nav-link-text">Contact Us</span></a></li>
+                </ul>
+              </div>
+            </div>
+            <!-- Mobile logo -->
+            <div class="whb-column whb-mobile-center whb-hidden-lg">
+              <div class="site-logo">
+                <a href="./index.html" class="wd-logo wd-main-logo" rel="home" aria-label="Home">
+                  <img src="https://pangugreen.com/wp-content/uploads/2026/05/logo.webp" style="max-width:160px;" alt="pangugreen.com" loading="lazy">
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===================== MAIN ===================== -->
+  <main class="main-page-wrapper">
+    <div class="success-page">
+      <div class="container">
+        <div class="success-card">
+          <!-- Icon -->
+          <div class="success-icon">
+            <svg width="40" height="40" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 6L9 17l-5-5"/>
+            </svg>
+          </div>
+
+          <h1 class="success-title">Payment Successful!</h1>
+          <p class="success-subtitle">
+            Thank you for your order. Your payment has been confirmed and<br>
+            a confirmation email has been sent to your email address.
+          </p>
+
+          <!-- Transaction ID -->
+          <div id="txn-badge" class="success-txn" style="display:none">
+            <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
+            <span>Transaction ID: <strong id="txn-id">—</strong></span>
+          </div>
+
+          <!-- Order details -->
+          <div class="success-details" id="order-details" style="display:none">
+            <div class="success-detail-title">📦 Order Summary</div>
+            <div class="success-detail-row"><span class="label">Product</span><span class="value" id="det-product">—</span></div>
+            <div class="success-detail-row"><span class="label">Quantity</span><span class="value" id="det-qty">—</span></div>
+            <div class="success-detail-row"><span class="label">Total Paid</span><span class="value" id="det-total">—</span></div>
+            <div class="success-detail-row"><span class="label">Shipping</span><span class="value" style="color:#2d5a27;font-weight:700">Free Worldwide Shipping</span></div>
+          </div>
+
+          <!-- Customer details -->
+          <div class="success-details" id="customer-details" style="display:none;margin-top:12px">
+            <div class="success-detail-title">👤 Customer Information</div>
+            <div class="success-detail-row"><span class="label">Name</span><span class="value" id="det-name">—</span></div>
+            <div class="success-detail-row"><span class="label">Email</span><span class="value" id="det-email">—</span></div>
+            <div class="success-detail-row"><span class="label">Phone</span><span class="value" id="det-phone">—</span></div>
+            <div class="success-detail-row"><span class="label">Shipping To</span><span class="value" id="det-address">—</span></div>
+            <div class="success-detail-row"><span class="label">Order Date</span><span class="value" id="det-date">—</span></div>
+          </div>
+
+          <p class="email-note" id="email-note" style="display:none">
+            ✉️ A confirmation email has been sent to <strong id="det-email-note">your email address</strong>.<br>
+            Please check your inbox (and spam folder).
+          </p>
+
+          <!-- Actions -->
+          <div class="success-actions" style="margin-top:28px">
+            <a href="./index.html" class="btn-home">
+              <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M3 12L12 3l9 9M5 10v9a1 1 0 001 1h4v-5h4v5h4a1 1 0 001-1v-9"/></svg>
+              Back to Home
+            </a>
+            <a href="./product.html" class="btn-products">
+              <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+              View More Products
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer-container color-scheme-light">
+    <div class="container main-footer">
+      <div class="elementor elementor-232">
+        <div class="elementor-element e-flex e-con-boxed e-con e-parent">
+          <div class="e-con-inner" style="display:flex;flex-direction:column;align-items:center;gap:16px;padding:40px 20px 30px;text-align:center">
+            <div class="wd-image">
+              <img width="180" src="https://pangugreen.com/wp-content/uploads/2026/05/logo-180x29.webp" alt="pangugreen.com" loading="lazy">
+            </div>
+            <div class="widget_nav_mega_menu">
+              <ul class="menu wd-nav wd-nav-horizontal wd-style-default wd-gap-s" style="display:flex;flex-wrap:wrap;justify-content:center;gap:8px 20px;list-style:none;padding:0;margin:0">
+                <li><a href="./about.html"   class="woodmart-nav-link"><span class="nav-link-text">About Us</span></a></li>
+                <li><a href="./contact.html" class="woodmart-nav-link"><span class="nav-link-text">Contact Us</span></a></li>
+              </ul>
+            </div>
+            <div class="wd-text-block">
+              <p style="margin:0;font-size:13px;color:#888"><a href="./index.html" style="color:inherit">pangugreen.com</a> Copyright © 2025</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<script>
+(function () {
+  var raw = localStorage.getItem('ck_last_order');
+  var params = new URLSearchParams(window.location.search);
+  var txnParam = params.get('txn');
+
+  function setText(id, val) {
+    var el = document.getElementById(id);
+    if (el) el.textContent = val;
+  }
+  function show(id) {
+    var el = document.getElementById(id);
+    if (el) el.style.display = '';
+  }
+
+  if (txnParam) {
+    setText('txn-id', txnParam);
+    show('txn-badge');
+  }
+
+  if (raw) {
+    try {
+      var order = JSON.parse(raw);
+      var c = order.customer;
+      var p = order.product;
+      var pay = order.payment;
+
+      setText('txn-id', order.transactionId || txnParam || '—');
+      show('txn-badge');
+
+      setText('det-product', p.name);
+      setText('det-qty', p.qty + ' unit(s)');
+      setText('det-total', '$' + pay.total);
+      show('order-details');
+
+      setText('det-name',    c.fullName);
+      setText('det-email',   c.email);
+      setText('det-phone',   c.phone);
+      setText('det-address', c.address + ', ' + c.city + ', ' + (c.state ? c.state + ' ' : '') + c.zip + ', ' + c.country);
+      setText('det-date',    new Date(order.date).toLocaleString());
+      show('customer-details');
+
+      setText('det-email-note', c.email);
+      show('email-note');
+    } catch (e) { /* ignore */ }
+  }
+})();
+</script>
+</body>
+</html>

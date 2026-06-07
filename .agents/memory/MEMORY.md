@@ -1,0 +1,2 @@
+- [Checkout system architecture](checkout-system.md) — PayPal Sandbox + EmailJS checkout built for pangugreen.com; Node.js Express backend replaces Python http.server
+- [neutralizeLink allowed list](neutralize-link-pattern.md) — every new HTML page must be added to the `allowed` array in ALL existing pages or links will be blocked

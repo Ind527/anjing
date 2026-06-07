@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Checkout — pangugreen.com</title>
+  <meta name="robots" content="noindex,nofollow">
+
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Woodmart / site CSS (same as all other pages) -->
+  <link rel="stylesheet" href="https://pangugreen.com/wp-content/themes/woodmart/css/bootstrap-light.min.css?ver=7.4.3">
+  <link rel="stylesheet" href="https://pangugreen.com/wp-content/themes/woodmart/css/parts/base.min.css?ver=7.4.3">
+  <link rel="stylesheet" href="https://pangugreen.com/wp-content/uploads/elementor/css/custom-frontend.min.css?ver=1778244504">
+  <link rel="stylesheet" href="https://pangugreen.com/wp-content/plugins/click-to-chat-for-whatsapp/new/inc/assets/css/main.css?ver=4.23">
+
+  <!-- Checkout custom styles -->
+  <link rel="stylesheet" href="checkout.css">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body { margin: 0; font-family: 'Jost', Roboto, sans-serif; background: #f6faf5; }
+    a    { text-decoration: none; }
+    img  { max-width: 100%; }
+  </style>
+</head>
+<body class="woodmart-theme woocommerce">
+
+<!-- ===================== NAVBAR ===================== -->
+<div class="website-wrapper">
+  <header class="whb-header whb-header_439246 whb-sticky-shadow whb-scroll-slide whb-sticky-real">
+    <div class="whb-main-header">
+      <div class="whb-row whb-general-header whb-sticky-row whb-without-bg whb-without-border whb-color-dark whb-flex-flex-middle">
+        <div class="container">
+          <div class="whb-flex-row whb-general-header-inner">
+
+            <!-- Logo — desktop -->
+            <div class="whb-column whb-col-left whb-visible-lg">
+              <div class="site-logo">
+                <a href="./index.html" class="wd-logo wd-main-logo" rel="home" aria-label="Link">
+                  <img fetchpriority="high" width="1600" height="304"
+                    src="https://pangugreen.com/wp-content/uploads/2026/05/logo.webp"
+                    class="attachment-full size-full" alt="" style="max-width:180px;"
+                    srcset="https://pangugreen.com/wp-content/uploads/2026/05/logo.webp 1600w,https://pangugreen.com/wp-content/uploads/2026/05/logo-300x57.webp 300w,https://pangugreen.com/wp-content/uploads/2026/05/logo-1024x195.webp 1024w"
+                    sizes="(max-width:1600px) 100vw,1600px" loading="lazy">
+                </a>
+              </div>
+              <div class="whb-space-element" style="width:30px"></div>
+            </div>
+
+            <!-- Navigation — desktop -->
+            <div class="whb-column whb-col-center whb-visible-lg">
+              <div class="wd-header-nav wd-header-main-nav text-left wd-design-1" role="navigation" aria-label="Main navigation">
+                <ul class="menu wd-nav wd-nav-main wd-style-default wd-gap-m">
+                  <li class="menu-item item-level-0 menu-simple-dropdown wd-event-hover">
+                    <a href="./index.html" class="woodmart-nav-link"><span class="nav-link-text">Home</span></a>
+                  </li>
+                  <li class="menu-item item-level-0 menu-simple-dropdown wd-event-hover">
+                    <a href="./product.html" class="woodmart-nav-link"><span class="nav-link-text">Products</span></a>
+                  </li>
+                  <li class="menu-item item-level-0 menu-simple-dropdown wd-event-hover">
+                    <a href="./about.html" class="woodmart-nav-link"><span class="nav-link-text">About Us</span></a>
+                  </li>
+                  <li class="menu-item item-level-0 menu-simple-dropdown wd-event-hover">
+                    <a href="./contact.html" class="woodmart-nav-link"><span class="nav-link-text">Contact Us</span></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Right tools — desktop -->
+            <div class="whb-column whb-col-right whb-visible-lg">
+              <div class="wd-header-cart wd-tools-element wd-design-2">
+                <a href="./checkout.html" style="display:flex;align-items:center;gap:6px;font-family:'Jost',sans-serif;font-size:14px;color:#2d5a27;font-weight:600">
+                  <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+                  Checkout
+                </a>
+              </div>
+            </div>
+
+            <!-- Mobile hamburger -->
+            <div class="whb-column whb-mobile-left whb-hidden-lg">
+              <div class="wd-tools-element wd-header-mobile-nav wd-style-icon wd-design-1">
+                <a href="#" rel="nofollow" aria-label="Open mobile menu">
+                  <span class="wd-tools-icon"></span>
+                  <span class="wd-tools-text">Menu</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Logo — mobile -->
+            <div class="whb-column whb-mobile-center whb-hidden-lg">
+              <div class="site-logo">
+                <a href="./index.html" class="wd-logo wd-main-logo" rel="home" aria-label="Link">
+                  <img src="https://pangugreen.com/wp-content/uploads/2026/05/logo.webp"
+                    style="max-width:160px;" alt="pangugreen.com" loading="lazy">
+                </a>
+              </div>
+            </div>
+
+          </div><!-- end whb-flex-row -->
+        </div><!-- end container -->
+      </div>
+    </div>
+  </header>
+
+  <!-- ===================== MAIN ===================== -->
+  <main class="main-page-wrapper">
+    <div class="checkout-page">
+      <div class="container">
+
+        <!-- Breadcrumb -->
+        <nav class="ck-breadcrumb" aria-label="Breadcrumb">
+          <a href="./index.html">Home</a>
+          <span>›</span>
+          <a href="./product.html">Products</a>
+          <span>›</span>
+          <span>Checkout</span>
+        </nav>
+
+        <!-- Page title -->
+        <h1 class="ck-page-title">Secure Checkout</h1>
+
+        <!-- Steps -->
+        <div class="ck-steps" aria-label="Checkout steps">
+          <div class="ck-step active">
+            <div class="ck-step-num">1</div>
+            <span>Information</span>
+          </div>
+          <div class="ck-step-line"></div>
+          <div class="ck-step">
+            <div class="ck-step-num">2</div>
+            <span>Payment</span>
+          </div>
+          <div class="ck-step-line"></div>
+          <div class="ck-step">
+            <div class="ck-step-num">3</div>
+            <span>Confirmation</span>
+          </div>
+        </div>
+
+        <!-- 2-col grid -->
+        <div class="checkout-grid">
+
+          <!-- ===== LEFT: FORM ===== -->
+          <div class="checkout-form-col">
+
+            <!-- Customer Information -->
+            <div class="ck-card">
+              <h2 class="ck-card-title">
+                <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                Customer Information
+              </h2>
+
+              <!-- Error banner -->
+              <div class="ck-form-error-banner" id="form-error-banner">
+                <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                Please fill in all required fields correctly before proceeding.
+              </div>
+
+              <form id="checkout-form" novalidate>
+
+                <!-- Row 1: Full Name + Email -->
+                <div class="ck-form-row">
+                  <div class="ck-field">
+                    <label for="ck-full-name">Full Name <span class="req">*</span></label>
+                    <input type="text" id="ck-full-name" name="fullName" placeholder="John Smith" autocomplete="name">
+                    <span class="ck-error-msg"></span>
+                  </div>
+                  <div class="ck-field">
+                    <label for="ck-email">Email Address <span class="req">*</span></label>
+                    <input type="email" id="ck-email" name="email" placeholder="john@example.com" autocomplete="email">
+                    <span class="ck-error-msg"></span>
+                  </div>
+                </div>
+
+                <!-- Row 2: Phone + Company -->
+                <div class="ck-form-row">
+                  <div class="ck-field">
+                    <label for="ck-phone">Phone Number <span class="req">*</span></label>
+                    <input type="tel" id="ck-phone" name="phone" placeholder="+1 234 567 8900" autocomplete="tel">
+                    <span class="ck-error-msg"></span>
+                  </div>
+                  <div class="ck-field">
+                    <label for="ck-company">Company <span style="font-weight:400;color:#999">(Optional)</span></label>
+                    <input type="text" id="ck-company" name="company" placeholder="Your Company" autocomplete="organization">
+                    <span class="ck-error-msg"></span>
+                  </div>
+                </div>
+
+                <!-- Row 3: Country -->
+                <div class="ck-form-row full">
+                  <div class="ck-field">
+                    <label for="ck-country">Country <span class="req">*</span></label>
+                    <select id="ck-country" name="country" autocomplete="country">
+                      <option value="">— Select Country —</option>
+                      <option>Afghanistan</option><option>Albania</option><option>Algeria</option>
+                      <option>Argentina</option><option>Australia</option><option>Austria</option>
+                      <option>Bahrain</option><option>Bangladesh</option><option>Belgium</option>
+                      <option>Bolivia</option><option>Brazil</option><option>Cambodia</option>
+                      <option>Canada</option><option>Chile</option><option>China</option>
+                      <option>Colombia</option><option>Congo</option><option>Croatia</option>
+                      <option>Czech Republic</option><option>Denmark</option><option>Ecuador</option>
+                      <option>Egypt</option><option>Ethiopia</option><option>Finland</option>
+                      <option>France</option><option>Germany</option><option>Ghana</option>
+                      <option>Greece</option><option>Hong Kong</option><option>Hungary</option>
+                      <option>India</option><option>Indonesia</option><option>Iran</option>
+                      <option>Iraq</option><option>Ireland</option><option>Israel</option>
+                      <option>Italy</option><option>Japan</option><option>Jordan</option>
+                      <option>Kenya</option><option>Kuwait</option><option>Lebanon</option>
+                      <option>Libya</option><option>Malaysia</option><option>Mexico</option>
+                      <option>Morocco</option><option>Myanmar</option><option>Netherlands</option>
+                      <option>New Zealand</option><option>Nigeria</option><option>Norway</option>
+                      <option>Oman</option><option>Pakistan</option><option>Peru</option>
+                      <option>Philippines</option><option>Poland</option><option>Portugal</option>
+                      <option>Qatar</option><option>Romania</option><option>Russia</option>
+                      <option>Saudi Arabia</option><option>Singapore</option><option>South Africa</option>
+                      <option>South Korea</option><option>Spain</option><option>Sri Lanka</option>
+                      <option>Sudan</option><option>Sweden</option><option>Switzerland</option>
+                      <option>Syria</option><option>Taiwan</option><option>Tanzania</option>
+                      <option>Thailand</option><option>Turkey</option><option>Uganda</option>
+                      <option>Ukraine</option><option>United Arab Emirates</option>
+                      <option>United Kingdom</option><option>United States</option>
+                      <option>Venezuela</option><option>Vietnam</option><option>Yemen</option>
+                      <option>Zimbabwe</option>
+                    </select>
+                    <span class="ck-error-msg"></span>
+                  </div>
+                </div>
+
+                <!-- Row 4: Street Address -->
+                <div class="ck-form-row full">
+                  <div class="ck-field">
+                    <label for="ck-address">Street Address <span class="req">*</span></label>
+                    <input type="text" id="ck-address" name="address" placeholder="123 Main Street, Apt 4B" autocomplete="street-address">
+                    <span class="ck-error-msg"></span>
+                  </div>
+                </div>
+
+                <!-- Row 5: City + State -->
+                <div class="ck-form-row">
+                  <div class="ck-field">
+                    <label for="ck-city">City <span class="req">*</span></label>
+                    <input type="text" id="ck-city" name="city" placeholder="New York" autocomplete="address-level2">
+                    <span class="ck-error-msg"></span>
+                  </div>
+                  <div class="ck-field">
+                    <label for="ck-state">State / Province</label>
+                    <input type="text" id="ck-state" name="state" placeholder="NY" autocomplete="address-level1">
+                    <span class="ck-error-msg"></span>
+                  </div>
+                </div>
+
+                <!-- Row 6: ZIP -->
+                <div class="ck-form-row">
+                  <div class="ck-field">
+                    <label for="ck-zip">ZIP / Postal Code <span class="req">*</span></label>
+                    <input type="text" id="ck-zip" name="zip" placeholder="10001" autocomplete="postal-code">
+                    <span class="ck-error-msg"></span>
+                  </div>
+                  <div class="ck-field" style="visibility:hidden"></div>
+                </div>
+
+                <!-- Row 7: Order Notes -->
+                <div class="ck-form-row full">
+                  <div class="ck-field">
+                    <label for="ck-notes">Order Notes <span style="font-weight:400;color:#999">(Optional)</span></label>
+                    <textarea id="ck-notes" name="notes" placeholder="Special delivery instructions, color preference, etc."></textarea>
+                  </div>
+                </div>
+
+              </form><!-- end form -->
+            </div><!-- end ck-card -->
+
+            <!-- Payment card -->
+            <div class="ck-card">
+              <h2 class="ck-card-title">
+                <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+                Payment
+              </h2>
+
+              <!-- Proceed button -->
+              <button id="btn-proceed" type="button">
+                <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                Proceed to Payment
+              </button>
+
+              <!-- PayPal section (hidden until form is valid) -->
+              <div id="paypal-section">
+                <div class="paypal-divider"><span>Pay securely with PayPal</span></div>
+                <div id="paypal-button-container"></div>
+                <p class="paypal-note">You will be redirected to PayPal to complete your payment safely.</p>
+              </div>
+
+              <!-- Secure badges -->
+              <div class="secure-badges">
+                <div class="secure-badge">
+                  <svg width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                  SSL Secured
+                </div>
+                <div class="secure-badge">
+                  <svg width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+                  PayPal Protected
+                </div>
+                <div class="secure-badge">
+                  <svg width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  Verified Seller
+                </div>
+              </div>
+            </div><!-- end ck-card payment -->
+
+          </div><!-- end checkout-form-col -->
+
+          <!-- ===== RIGHT: SUMMARY ===== -->
+          <div class="checkout-summary-col">
+
+            <!-- Product summary card -->
+            <div class="ck-card">
+              <h2 class="ck-card-title">
+                <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+                Order Summary
+              </h2>
+
+              <!-- Product row (injected by JS) -->
+              <div id="summary-product"></div>
+
+              <!-- Quantity selector -->
+              <div class="ck-qty-row">
+                <span class="ck-qty-label">Quantity</span>
+                <div class="ck-qty-ctrl">
+                  <button class="ck-qty-btn" id="qty-minus" aria-label="Decrease quantity">−</button>
+                  <span id="qty-display">1</span>
+                  <button class="ck-qty-btn" id="qty-plus" aria-label="Increase quantity">+</button>
+                </div>
+              </div>
+
+              <!-- Subtotal -->
+              <div class="ck-line">
+                <span>Subtotal</span>
+                <strong id="summary-subtotal">$0.00</strong>
+              </div>
+
+              <!-- Shipping -->
+              <div class="ck-line">
+                <span>Shipping</span>
+                <span class="ck-shipping-badge">
+                  <svg width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  FREE
+                </span>
+              </div>
+
+              <!-- Total -->
+              <div class="ck-total-row">
+                <span>Total</span>
+                <span class="ck-total-amount" id="summary-total">$0.00</span>
+              </div>
+            </div><!-- end summary card -->
+
+            <!-- Free shipping card -->
+            <div class="ck-card" style="padding:0;border:none;box-shadow:none">
+              <div class="ck-shipping-card">
+                <div class="ck-shipping-icon">🚚</div>
+                <div class="ck-shipping-text">
+                  <strong>Free Worldwide Shipping</strong>
+                  <span>No minimum order required. Ships globally.</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Guarantee -->
+            <div class="ck-card" style="padding:0;border:none;box-shadow:none">
+              <div class="ck-guarantee">
+                <span style="font-size:20px;flex-shrink:0">🛡️</span>
+                <div>
+                  <strong style="display:block;font-family:'Jost',sans-serif;font-size:13px;font-weight:700;margin-bottom:2px">100% Secure Payment</strong>
+                  <span style="font-family:'Jost',sans-serif;font-size:12px">Your payment details are encrypted and processed securely via PayPal Sandbox. We never store your card information.</span>
+                </div>
+              </div>
+            </div>
+
+          </div><!-- end checkout-summary-col -->
+
+        </div><!-- end checkout-grid -->
+      </div><!-- end container -->
+    </div><!-- end checkout-page -->
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer-container color-scheme-light">
+    <div class="container main-footer">
+      <div class="elementor elementor-232">
+        <div class="elementor-element e-flex e-con-boxed e-con e-parent">
+          <div class="e-con-inner" style="display:flex;flex-direction:column;align-items:center;gap:16px;padding:40px 20px 30px;text-align:center">
+            <div class="wd-image">
+              <img width="180" src="https://pangugreen.com/wp-content/uploads/2026/05/logo-180x29.webp" alt="pangugreen.com" loading="lazy">
+            </div>
+            <div class="widget_nav_mega_menu">
+              <ul class="menu wd-nav wd-nav-horizontal wd-style-default wd-gap-s" style="display:flex;flex-wrap:wrap;justify-content:center;gap:8px 20px;list-style:none;padding:0;margin:0">
+                <li><a href="./about.html"    class="woodmart-nav-link"><span class="nav-link-text">About Us</span></a></li>
+                <li><a href="./contact.html"  class="woodmart-nav-link"><span class="nav-link-text">Contact Us</span></a></li>
+                <li><a href="./checkout.html" class="woodmart-nav-link"><span class="nav-link-text">Checkout</span></a></li>
+              </ul>
+            </div>
+            <div class="wd-text-block">
+              <p style="margin:0;font-size:13px;color:#888">
+                <a href="./index.html" style="color:inherit">pangugreen.com</a> Copyright © 2025
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</div><!-- end website-wrapper -->
+
+<!-- ===================== LOADING OVERLAY ===================== -->
+<div id="ck-loading" role="dialog" aria-modal="true" aria-label="Processing payment">
+  <div class="ck-spinner"></div>
+  <span id="ck-loading-text">Processing…</span>
+</div>
+
+<!-- Checkout logic -->
+<script src="checkout.js"></script>
+
+</body>
+</html>
