@@ -1,0 +1,330 @@
+<!DOCTYPE html><html lang="en-US"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>About Us – pangugreen.com</title>
+    <link rel="icon" href="https://pangugreen.com/wp-content/uploads/2026/05/cropped-ico-32x32.jpg" sizes="32x32">
+    <link rel="stylesheet" href="https://pangugreen.com/wp-content/themes/woodmart/css/bootstrap-light.min.css?ver=7.4.3">
+    <link rel="stylesheet" href="https://pangugreen.com/wp-content/themes/woodmart/css/parts/base.min.css?ver=7.4.3">
+    <link rel="stylesheet" href="https://pangugreen.com/wp-content/themes/woodmart/css/parts/header-base.min.css?ver=7.4.3">
+    <link rel="stylesheet" href="https://pangugreen.com/wp-content/themes/woodmart/css/parts/header-el-base.min.css?ver=7.4.3">
+    <link rel="stylesheet" href="https://pangugreen.com/wp-content/themes/woodmart/css/parts/mod-nav-vertical.min.css?ver=7.4.3">
+    <link rel="stylesheet" href="https://pangugreen.com/wp-content/themes/woodmart/css/parts/opt-sticky-nav.min.css?ver=7.4.3">
+    <link rel="stylesheet" href="https://pangugreen.com/wp-content/themes/woodmart/css/parts/footer-base.min.css?ver=7.4.3">
+    <link rel="stylesheet" href="https://pangugreen.com/wp-content/themes/woodmart/css/parts/header-el-my-account.min.css?ver=7.4.3">
+    <link rel="stylesheet" href="https://pangugreen.com/wp-content/themes/woodmart/css/parts/header-el-cart.min.css?ver=7.4.3">
+    <link rel="stylesheet" href="https://pangugreen.com/wp-content/themes/woodmart/css/parts/header-el-search.min.css?ver=7.4.3">
+    <link rel="stylesheet" href="https://pangugreen.com/wp-content/themes/woodmart/css/parts/header-el-mobile-nav-dropdown.min.css?ver=7.4.3">
+    <link rel="stylesheet" href="https://pangugreen.com/wp-content/themes/woodmart/css/parts/mod-tools.min.css?ver=7.4.3">
+    <link rel="stylesheet" href="https://pangugreen.com/wp-content/themes/woodmart/css/parts/opt-scrolltotop.min.css?ver=7.4.3">
+    <link rel="stylesheet" href="https://pangugreen.com/wp-content/uploads/2026/05/xts-header_303964-1778657791.css?ver=7.4.3">
+    <link rel="stylesheet" href="https://pangugreen.com/wp-content/uploads/2025/04/xts-theme_settings_default-1744190064.css?ver=7.4.3">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Jost%3A400%2C600%2C700&ver=7.4.3">
+    <style>
+        body { font-family: 'Jost', sans-serif; margin: 0; padding: 0; color: #333; }
+        .page-content { max-width: 1200px; margin: 60px auto; padding: 0 30px; }
+        .page-title-section {
+            background: linear-gradient(135deg, #2d5a27 0%, #4a8f40 100%);
+            color: #fff;
+            padding: 60px 30px;
+            text-align: center;
+        }
+        .page-title-section h1 { font-size: 2.5rem; margin: 0 0 10px; font-weight: 700; }
+        .page-title-section p { font-size: 1.1rem; margin: 0; opacity: 0.9; }
+        .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; margin-bottom: 60px; }
+        .about-grid.reverse { direction: rtl; }
+        .about-grid.reverse > * { direction: ltr; }
+        .about-img img { width: 100%; border-radius: 12px; box-shadow: 0 10px 40px rgba(0,0,0,0.12); }
+        .about-text h2 { font-size: 1.8rem; font-weight: 700; color: #2d5a27; margin-bottom: 16px; }
+        .about-text p { font-size: 1rem; line-height: 1.8; color: #555; margin-bottom: 14px; }
+        .stats-section { background: #f8f8f8; padding: 60px 30px; text-align: center; margin: 60px 0; }
+        .stats-section h2 { font-size: 1.8rem; font-weight: 700; color: #2d5a27; margin-bottom: 40px; }
+        .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; max-width: 1000px; margin: 0 auto; }
+        .stat-box { background: #fff; border-radius: 12px; padding: 30px 20px; box-shadow: 0 4px 20px rgba(0,0,0,0.07); }
+        .stat-box .num { font-size: 2.5rem; font-weight: 700; color: #2d5a27; margin-bottom: 8px; }
+        .stat-box .label { font-size: 0.95rem; color: #777; }
+        .values-section { max-width: 1200px; margin: 0 auto 60px; padding: 0 30px; }
+        .values-section h2 { font-size: 1.8rem; font-weight: 700; color: #2d5a27; text-align: center; margin-bottom: 40px; }
+        .values-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+        .value-card { background: #fff; border: 1px solid #eee; border-radius: 12px; padding: 30px; text-align: center; box-shadow: 0 4px 20px rgba(0,0,0,0.05); transition: transform 0.2s, box-shadow 0.2s; }
+        .value-card:hover { transform: translateY(-4px); box-shadow: 0 8px 30px rgba(0,0,0,0.1); }
+        .value-card .icon { font-size: 2.5rem; margin-bottom: 16px; }
+        .value-card h3 { font-size: 1.1rem; font-weight: 700; color: #2d5a27; margin-bottom: 10px; }
+        .value-card p { font-size: 0.95rem; color: #666; line-height: 1.7; margin: 0; }
+        @media (max-width: 768px) {
+            .about-grid { grid-template-columns: 1fr; gap: 30px; }
+            .about-grid.reverse { direction: ltr; }
+            .stats-grid { grid-template-columns: repeat(2, 1fr); }
+            .values-grid { grid-template-columns: 1fr; }
+            .page-title-section h1 { font-size: 1.8rem; }
+        }
+    </style>
+    <script type="text/javascript" src="https://pangugreen.com/wp-includes/js/jquery/jquery.min.js?ver=3.7.1"></script>
+    <script type="text/javascript" src="https://pangugreen.com/wp-content/themes/woodmart/js/libs/device.min.js?ver=7.4.3"></script>
+    <script type="text/javascript" src="https://pangugreen.com/wp-content/themes/woodmart/js/scripts/global/scrollBar.min.js?ver=7.4.3"></script>
+</head>
+<body class="page-template-default page theme-woodmart wrapper-custom">
+
+<div class="website-wrapper">
+
+<!-- HEADER -->
+<div id="whb-header" class="whb-header whb-sticky-enabled whb-main-header">
+    <div class="whb-main-header">
+        <div class="whb-row whb-general-header whb-flex-row">
+            <div class="container">
+                <div class="whb-flex-row whb-general-header-inner">
+
+                    <div class="whb-column whb-col-left whb-visible-lg">
+                        <div class="site-logo">
+                            <a href="./index.html">
+                                <img src="https://pangugreen.com/wp-content/uploads/2026/05/Golden-Bean-Logo.svg" alt="pangugreen.com" width="160">
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="whb-column whb-col-center whb-visible-lg">
+                        <div class="wd-header-nav wd-header-main-nav text-left wd-design-1" role="navigation" aria-label="Main navigation">
+                            <ul class="menu wd-nav wd-nav-main wd-style-default wd-gap-m">
+                                <li class="menu-item item-level-0 menu-simple-dropdown wd-event-hover"><a href="./index.html" class="woodmart-nav-link" data-nce-hover-nav="true"><span class="nav-link-text">Home</span></a></li>
+                                <li class="menu-item item-level-0 menu-simple-dropdown wd-event-hover"><a href="./product.html" class="woodmart-nav-link" data-nce-hover-nav="true"><span class="nav-link-text">Products</span></a></li>
+                                <li class="menu-item item-level-0 menu-simple-dropdown wd-event-hover"><a href="javascript:void(0)" class="woodmart-nav-link" data-nce-hover-nav="true" style="cursor:default;"><span class="nav-link-text">Blog</span></a></li>
+                                <li class="menu-item current-menu-item item-level-0 menu-simple-dropdown wd-event-hover"><a href="./about.html" class="woodmart-nav-link" data-nce-hover-nav="true"><span class="nav-link-text">About Us</span></a></li>
+                                <li class="menu-item item-level-0 menu-simple-dropdown wd-event-hover"><a href="./contact.html" class="woodmart-nav-link" data-nce-hover-nav="true"><span class="nav-link-text">Contact Us</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="whb-column whb-col-right whb-visible-lg">
+                        <a href="javascript:void(0)" style="cursor:default; font-size:14px; color:#777; text-decoration:none;">Login / Register</a>
+                    </div>
+
+                    <!-- Mobile Header -->
+                    <div class="whb-column whb-mobile-left whb-hidden-lg">
+                        <div class="site-logo">
+                            <a href="./index.html">
+                                <img src="https://pangugreen.com/wp-content/uploads/2026/05/Golden-Bean-Logo.svg" alt="pangugreen.com" width="130">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="whb-column whb-mobile-right whb-hidden-lg">
+                        <style>
+                            .mobile-menu-toggle { background: none; border: none; cursor: pointer; padding: 10px; font-size: 22px; }
+                            #mobile-nav { display: none; position: fixed; top: 0; left: 0; width: 80%; max-width: 300px; height: 100%; background: #fff; z-index: 9999; box-shadow: 4px 0 20px rgba(0,0,0,0.2); padding: 20px; box-sizing: border-box; overflow-y: auto; }
+                            #mobile-nav.open { display: block; }
+                            #mobile-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.4); z-index: 9998; }
+                            #mobile-overlay.open { display: block; }
+                            #mobile-nav ul { list-style: none; padding: 0; margin: 20px 0 0; }
+                            #mobile-nav ul li a { display: block; padding: 14px 0; border-bottom: 1px solid #eee; font-size: 15px; color: #333; text-decoration: none; font-weight: 500; }
+                            #mobile-nav ul li a:hover { color: #2d5a27; }
+                            #mobile-nav .close-btn { background: none; border: none; font-size: 24px; cursor: pointer; float: right; }
+                        </style>
+                        <button class="mobile-menu-toggle" onclick="document.getElementById('mobile-nav').classList.add('open');document.getElementById('mobile-overlay').classList.add('open');">☰</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Mobile Nav Drawer -->
+<div id="mobile-overlay" onclick="document.getElementById('mobile-nav').classList.remove('open');this.classList.remove('open');"></div>
+<div id="mobile-nav">
+    <button class="close-btn" onclick="document.getElementById('mobile-nav').classList.remove('open');document.getElementById('mobile-overlay').classList.remove('open');">✕</button>
+    <a href="./index.html"><img src="https://pangugreen.com/wp-content/uploads/2026/05/Golden-Bean-Logo.svg" alt="Logo" width="120" style="margin-top:10px;"></a>
+    <ul>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./product.html">Products</a></li>
+        <li><a href="javascript:void(0)" style="color:#aaa;cursor:default;">Blog</a></li>
+        <li><a href="./about.html" style="color:#2d5a27;font-weight:700;">About Us</a></li>
+        <li><a href="./contact.html">Contact Us</a></li>
+    </ul>
+</div>
+
+<!-- PAGE TITLE -->
+<div class="page-title-section">
+    <h1>About Us</h1>
+    <p>Learn more about Golden Bean — your trusted partner in waterproof coatings</p>
+</div>
+
+<!-- MAIN CONTENT -->
+<div class="page-content">
+
+    <!-- Section 1: Who We Are -->
+    <div class="about-grid">
+        <div class="about-text">
+            <h2>Who We Are</h2>
+            <p>Golden Bean (Pangugreen) is a leading manufacturer and supplier of high-performance waterproof coatings, metallic paints, tile paints, and specialty construction materials.</p>
+            <p>Founded with a mission to deliver durable, eco-friendly, and cost-effective solutions, we serve homeowners, contractors, and construction professionals across the globe.</p>
+            <p>Our products are engineered to withstand the harshest conditions — from extreme temperatures and heavy rainfall to high-pressure environments — ensuring lasting protection for every surface.</p>
+        </div>
+        <div class="about-img">
+            <img src="https://pangugreen.com/wp-content/uploads/2024/03/waterproof-coating-banner.jpg" alt="About Golden Bean" onerror="this.src='https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=600&q=80'">
+        </div>
+    </div>
+
+    <!-- Section 2: Our Mission -->
+    <div class="about-grid reverse">
+        <div class="about-img">
+            <img src="https://pangugreen.com/wp-content/uploads/2024/03/factory.jpg" alt="Our Manufacturing" onerror="this.src='https://images.unsplash.com/photo-1581092921461-39b9d08a9b41?w=600&q=80'">
+        </div>
+        <div class="about-text">
+            <h2>Our Mission</h2>
+            <p>We are committed to innovating sustainable building solutions that protect homes, commercial properties, and infrastructure — while minimizing environmental impact.</p>
+            <p>Every product we manufacture goes through rigorous quality testing to meet international standards, ensuring you get performance you can rely on.</p>
+            <p>Our state-of-the-art production facilities and experienced R&D team continuously develop new formulations to address the evolving needs of the construction industry.</p>
+        </div>
+    </div>
+
+</div>
+
+<!-- STATS -->
+<div class="stats-section">
+    <h2>Golden Bean by the Numbers</h2>
+    <div class="stats-grid">
+        <div class="stat-box">
+            <div class="num">10+</div>
+            <div class="label">Years of Experience</div>
+        </div>
+        <div class="stat-box">
+            <div class="num">50+</div>
+            <div class="label">Product Lines</div>
+        </div>
+        <div class="stat-box">
+            <div class="num">30+</div>
+            <div class="label">Countries Served</div>
+        </div>
+        <div class="stat-box">
+            <div class="num">10K+</div>
+            <div class="label">Happy Customers</div>
+        </div>
+    </div>
+</div>
+
+<!-- VALUES -->
+<div class="values-section">
+    <h2>Our Core Values</h2>
+    <div class="values-grid">
+        <div class="value-card">
+            <div class="icon">🌿</div>
+            <h3>Sustainability</h3>
+            <p>We use water-based, low-VOC formulas that are safe for people and the environment without compromising on performance.</p>
+        </div>
+        <div class="value-card">
+            <div class="icon">🔬</div>
+            <h3>Innovation</h3>
+            <p>Our dedicated R&D team continuously improves our formulations to deliver cutting-edge solutions for modern construction challenges.</p>
+        </div>
+        <div class="value-card">
+            <div class="icon">🏆</div>
+            <h3>Quality</h3>
+            <p>Every product is tested to international standards — delivering consistent performance you can count on, project after project.</p>
+        </div>
+        <div class="value-card">
+            <div class="icon">🤝</div>
+            <h3>Partnership</h3>
+            <p>We work closely with distributors, contractors, and homeowners to understand their needs and deliver tailored solutions.</p>
+        </div>
+        <div class="value-card">
+            <div class="icon">💰</div>
+            <h3>Value</h3>
+            <p>Premium quality at competitive prices — we believe great protection shouldn't break the bank.</p>
+        </div>
+        <div class="value-card">
+            <div class="icon">📦</div>
+            <h3>Reliability</h3>
+            <p>On-time delivery and dependable supply chains so your projects never face unnecessary delays.</p>
+        </div>
+    </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer-container color-scheme-light" style="background:#1a2e1a; color:#ccc; padding:40px 30px; text-align:center; margin-top:60px;">
+    <div style="max-width:1200px; margin:0 auto;">
+        <img src="https://pangugreen.com/wp-content/uploads/2026/05/Golden-Bean-Logo.svg" alt="Golden Bean" width="140" style="filter:brightness(0) invert(1); margin-bottom:20px;">
+        <div style="margin:20px 0; display:flex; justify-content:center; gap:30px; flex-wrap:wrap;">
+            <a href="./index.html" style="color:#aaa; text-decoration:none; font-size:14px;">Home</a>
+            <a href="./product.html" style="color:#aaa; text-decoration:none; font-size:14px;">Products</a>
+            <a href="./about.html" style="color:#fff; text-decoration:none; font-size:14px; font-weight:600;">About Us</a>
+            <a href="./contact.html" style="color:#aaa; text-decoration:none; font-size:14px;">Contact Us</a>
+        </div>
+        <p style="color:#666; font-size:13px; margin:0;">© 2026 pangugreen.com — All rights reserved.</p>
+    </div>
+</footer>
+
+</div><!-- .website-wrapper -->
+
+<script>
+(function() {
+    var origin = "https://pangugreen.com";
+    var allowed = ["https://pangugreen.com/", "https://pangugreen.com/product.html", "https://pangugreen.com/about.html", "https://pangugreen.com/contact.html"];
+    var currentPath = "/about.html";
+    var relativeRoot = "./";
+
+    function normalizePath(pathname) {
+        var withoutIndex = pathname.replace(/\/index\.html$/i, "");
+        var withoutTrailingSlash = withoutIndex.replace(/\/$/, "");
+        return withoutTrailingSlash || "/";
+    }
+
+    function buildExportHref(url) {
+        var clean = normalizePath(url.pathname);
+        if (clean === currentPath && url.hash) { return url.hash; }
+        var targetPath;
+        if (clean === "/") {
+            targetPath = "index.html";
+        } else if (/\.html$/i.test(clean)) {
+            targetPath = clean.substring(1);
+        } else {
+            targetPath = clean.substring(1) + "/index.html";
+        }
+        return relativeRoot + targetPath + (url.hash || "");
+    }
+
+    function neutralizeLink(a) {
+        if (!a) return;
+        var rawHref = a.getAttribute("href");
+        if (!rawHref) return;
+        if (a.getAttribute("data-nce-checked") === rawHref) return;
+        a.setAttribute("data-nce-checked", rawHref);
+        if (rawHref.indexOf("#") === 0 || rawHref.indexOf("javascript:") === 0 || rawHref.indexOf("mailto:") === 0 || rawHref.indexOf("tel:") === 0) return;
+        try {
+            var url = new URL(rawHref, origin + "/");
+            if (url.origin === origin) {
+                var clean = normalizePath(url.pathname);
+                var full = url.origin + clean;
+                var isExported = allowed.indexOf(full) !== -1;
+                if (!isExported) {
+                    a.setAttribute("href", "javascript:void(0)");
+                    a.removeAttribute("target");
+                    a.style.cursor = "default";
+                } else {
+                    a.setAttribute("href", buildExportHref(url));
+                    if (a.style.cursor === "default") { a.style.cursor = ""; }
+                }
+            } else {
+                if (a.getAttribute("target") !== "_blank") { a.setAttribute("target", "_top"); }
+            }
+        } catch(err) {}
+    }
+
+    document.querySelectorAll("a[href]").forEach(neutralizeLink);
+
+    var events = ["click", "mousedown", "mouseup", "pointerdown", "pointerup", "touchstart", "touchend"];
+    events.forEach(function(ev) {
+        document.addEventListener(ev, function(e) {
+            var a = e.target.closest("a");
+            if (!a) return;
+            var rawHref = a.getAttribute("href");
+            if (!rawHref || rawHref.indexOf("#") === 0) return;
+            if (rawHref.indexOf("javascript:void(0)") !== -1) {
+                e.preventDefault();
+                e.stopPropagation();
+                e.stopImmediatePropagation();
+                return;
+            }
+        });
+    });
+})();
+</script>
+
+</body></html>
