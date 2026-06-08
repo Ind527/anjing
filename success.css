@@ -11,7 +11,7 @@
 }
 
 .success-page {
-  background: #f6faf5;
+  background: #ffffff;
   min-height: 70vh;
   padding: 60px 0 100px;
   font-family: var(--ck-font);
@@ -47,7 +47,7 @@
 .success-title {
   font-size: 28px;
   font-weight: 800;
-  color: var(--ck-primary);
+  color: #000;
   margin: 0 0 10px;
 }
 
