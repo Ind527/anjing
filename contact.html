@@ -226,7 +226,7 @@ html, body { background: #fff; font-family: 'Inter', sans-serif; }
 .contact-page-section {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 70px 40px 80px;
+    padding: 160px 40px 80px;
     display: flex;
     gap: 0;
     align-items: flex-start;
@@ -264,12 +264,13 @@ html, body { background: #fff; font-family: 'Inter', sans-serif; }
     cursor: pointer;
     font-size: .97rem;
     font-weight: 600;
-    color: #0A6B43;
+    color: #222222;
     transition: color .18s;
     gap: 12px;
     user-select: none;
 }
-.faq-question:hover { color: #085c39; }
+.faq-question:hover { color: #006B3F; }
+.faq-item.open .faq-question { color: #006B3F; }
 .faq-question .faq-icon {
     width: 20px;
     height: 20px;
@@ -279,6 +280,9 @@ html, body { background: #fff; font-family: 'Inter', sans-serif; }
     justify-content: center;
     transition: transform .25s;
 }
+.faq-question .faq-icon svg { stroke: #222222; transition: stroke .18s; }
+.faq-question:hover .faq-icon svg { stroke: #006B3F; }
+.faq-item.open .faq-question .faq-icon svg { stroke: #006B3F; }
 .faq-question .faq-icon { transform: rotate(180deg); }
 .faq-item.open .faq-question .faq-icon { transform: rotate(0deg); }
 .faq-answer {
