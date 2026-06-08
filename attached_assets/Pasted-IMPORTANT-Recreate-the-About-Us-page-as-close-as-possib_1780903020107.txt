@@ -1,0 +1,210 @@
+IMPORTANT: Recreate the About Us page as close as possible to the uploaded reference images. The layout, spacing, typography hierarchy, image placement, colors, and proportions should closely match the screenshots.
+
+DO NOT redesign.
+DO NOT modernize.
+DO NOT change the layout structure.
+Follow the reference images as the primary design source.
+
+==================================================
+SECTION 1 – COMPANY INTRODUCTION
+==================================================
+
+Layout:
+- Three-column layout.
+- Left content column approximately 50%.
+- Middle image column approximately 25%.
+- Right content/image column approximately 25%.
+- Large white background.
+- Generous spacing and clean layout.
+
+Top Small Label:
+"Some words about us"
+
+Style:
+- Green color (#0A6B43)
+- Small font size
+- Medium weight
+
+Main Heading:
+"We Help Everyone
+Enjoy Amazing
+Products"
+
+Style:
+- Very large heading
+- Font size around 70–80px
+- Bold weight
+- Dark color (#222222)
+- Multi-line exactly like reference
+
+Description Text:
+- Gray color (#666666)
+- Comfortable line-height
+- Width similar to reference
+- Multiple paragraphs
+
+Middle Column:
+- Top factory building image
+- Rounded corners
+- Width fills column
+
+- Below image:
+Large factory interior image
+- Rounded corners
+- Taller image
+
+Right Column:
+Top Blue Information Card
+
+Background:
+#3D73D1
+
+Text:
+White
+
+Padding:
+30px
+
+Rounded corners:
+12px
+
+Include:
+- Company description paragraph
+- Company logo block
+- Company name
+
+Below Card:
+Large warehouse/factory exterior image
+
+Rounded corners:
+12px
+
+Spacing between elements should match the reference.
+
+==================================================
+SECTION 2 – FEATURES
+==================================================
+
+White background.
+
+Three equally spaced feature columns.
+
+Feature 1:
+Truck Icon
+Title:
+Fast Delivery
+Description:
+Get Your Order Lightning Quick, Straight to Your Doorstep!
+
+Feature 2:
+Thumbs Up Icon
+Title:
+Best Quality
+Description:
+Unmatched Durability, Flawless Finish, Trusted by Professionals Worldwide.
+
+Feature 3:
+Protection/Return Icon
+Title:
+After-sale Protection
+Description:
+Guaranteed Quality & Hassle-Free Support for Total Peace of Mind!
+
+Icons:
+Blue outline style
+Large size
+
+Titles:
+Dark color
+Bold
+Large
+
+Descriptions:
+Gray
+Centered
+
+==================================================
+SECTION 3 – JOIN OUR COMMUNITY
+==================================================
+
+Large horizontal card.
+
+Height:
+Approximately 500px
+
+Layout:
+Left content 60%
+Right image 40%
+
+Background:
+#3D73D1
+
+Left Side:
+Heading:
+Join Our Community
+
+Large white text.
+
+Description:
+Several paragraphs of company information.
+
+Text color:
+White
+
+Padding:
+60px
+
+Right Side:
+Large team meeting image.
+
+Image fills entire right side.
+
+Object-fit:
+cover
+
+Rounded corners only on outer card edges.
+
+==================================================
+GENERAL DESIGN RULES
+==================================================
+
+Font:
+Poppins
+
+Navbar:
+Use exactly the same navbar style as the Home page.
+
+Footer:
+Use exactly the same footer style as the Home page.
+
+Spacing:
+Large white spaces like the reference.
+
+Colors:
+Green accent:
+#0A6B43
+
+Blue accent:
+#3D73D1
+
+Text:
+#222222
+
+Gray:
+#666666
+
+Images:
+Use large rounded images exactly positioned like the reference.
+
+Responsive:
+Desktop follows the exact screenshot layout.
+Tablet scales proportionally.
+Mobile stacks sections vertically.
+
+Animations:
+Subtle fade-in.
+Hover effects on cards.
+Smooth transitions.
+
+Goal:
+Create an About Us page visually 95–100% similar to the uploaded screenshots, including layout proportions, typography, image positioning, feature section, blue information card, and Join Our Community section.
