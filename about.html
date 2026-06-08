@@ -137,13 +137,13 @@ body {
 
 /* ─── SECTION 1: Company Introduction ─── */
 .about-intro-section {
-    padding: 80px 60px 80px;
+    padding: 80px 80px 80px 100px;
     max-width: 1400px;
     margin: 0 auto;
-    display: grid;
-    grid-template-columns: 50% 25% 25%;
-    gap: 32px;
-    align-items: start;
+    display: flex;
+    flex-direction: row;
+    gap: 60px;
+    align-items: flex-start;
     opacity: 0;
     transform: translateY(24px);
     transition: opacity 0.7s ease, transform 0.7s ease;
@@ -153,29 +153,33 @@ body {
     transform: translateY(0);
 }
 
-/* Left column */
+/* Left column — 55% */
 .about-intro-left {
-    padding-right: 40px;
+    flex: 0 0 55%;
+    max-width: 55%;
 }
 .about-intro-label {
     color: #0A6B43;
     font-size: 13px;
     font-weight: 500;
-    margin: 0 0 16px;
-    letter-spacing: 0.02em;
+    margin: 0 0 14px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
 }
 .about-intro-heading {
-    font-size: 72px;
+    font-size: clamp(38px, 4.5vw, 64px);
     font-weight: 700;
-    line-height: 1.08;
+    line-height: 1.1;
     color: #222222;
-    margin: 0 0 32px;
+    margin: 0 0 30px;
+    max-width: 640px;
 }
 .about-intro-text {
     color: #666666;
     font-size: 15px;
     line-height: 1.75;
     margin: 0;
+    max-width: 620px;
 }
 .about-intro-text p {
     margin: 0 0 14px;
@@ -188,11 +192,21 @@ body {
     margin-bottom: 6px;
 }
 
-/* Middle column */
+/* Right column — 45% (images) */
+.about-intro-right {
+    flex: 0 0 45%;
+    max-width: 45%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* Middle column — hidden, images merged into right */
 .about-intro-middle {
     display: flex;
     flex-direction: column;
     gap: 16px;
+    flex: 1;
 }
 .about-intro-middle img {
     width: 100%;
@@ -201,17 +215,10 @@ body {
     display: block;
 }
 .about-img-building {
-    height: 220px;
+    height: 200px;
 }
 .about-img-interior {
-    height: 320px;
-}
-
-/* Right column */
-.about-intro-right {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
+    height: 280px;
 }
 .about-blue-card {
     background: #3D73D1;
@@ -228,11 +235,12 @@ body {
 .about-blue-card-company {
     display: flex;
     align-items: center;
-    gap: 14px;
+    gap: 10px;
+    flex-wrap: wrap;
 }
 .about-blue-card-logo {
-    width: 48px;
-    height: 48px;
+    width: 40px;
+    height: 40px;
     border-radius: 8px;
     object-fit: contain;
     background: #fff;
@@ -240,10 +248,12 @@ body {
     flex-shrink: 0;
 }
 .about-blue-card-name {
-    font-size: 13.5px;
+    font-size: 12.5px;
     font-weight: 600;
     color: #fff;
     line-height: 1.3;
+    flex: 1;
+    min-width: 0;
 }
 .about-img-warehouse {
     width: 100%;
@@ -357,33 +367,50 @@ body {
     display: block;
 }
 
+/* ─── INTRO RIGHT: nested 2-col image grid ─── */
+.about-intro-right-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    align-items: start;
+}
+.about-intro-right-col {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+.about-intro-right-col img {
+    width: 100%;
+    border-radius: 12px;
+    object-fit: cover;
+    display: block;
+}
+.about-img-building  { height: 190px; }
+.about-img-interior  { height: 270px; }
+.about-img-warehouse { height: 200px; border-radius: 12px; width: 100%; object-fit: cover; display: block; }
+
 /* ─── RESPONSIVE ─── */
 @media (max-width: 1100px) {
-    .about-intro-heading { font-size: 54px; }
-    .about-intro-section { padding: 60px 40px; gap: 24px; }
-    .about-features-section { padding: 60px 40px; }
-    .about-community-section { padding: 40px 40px 60px; }
+    .about-intro-section {
+        padding: 70px 60px 70px 80px;
+        gap: 48px;
+    }
+    .about-features-section { padding: 60px 48px; }
+    .about-community-section { padding: 40px 48px 60px; }
     .about-community-left { padding: 48px 40px; }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 860px) {
     .about-intro-section {
-        grid-template-columns: 1fr;
-        padding: 50px 28px;
+        flex-direction: column;
+        padding: 60px 32px 60px 32px;
+        gap: 40px;
     }
-    .about-intro-left { padding-right: 0; }
-    .about-intro-heading { font-size: 44px; }
-    .about-intro-middle {
-        flex-direction: row;
-        gap: 12px;
-    }
-    .about-img-building, .about-img-interior { height: 200px; flex: 1; }
+    .about-intro-left,
     .about-intro-right {
-        flex-direction: row;
-        gap: 12px;
+        flex: 0 0 100%;
+        max-width: 100%;
     }
-    .about-blue-card { flex: 1; }
-    .about-img-warehouse { flex: 1; height: 200px; }
     .about-features-section { padding: 50px 28px; }
     .about-features-inner { grid-template-columns: 1fr; gap: 36px; }
     .about-community-section { padding: 30px 28px 50px; }
@@ -393,11 +420,10 @@ body {
     .about-community-heading { font-size: 28px; }
 }
 
-@media (max-width: 600px) {
-    .about-intro-heading { font-size: 36px; }
-    .about-intro-middle { flex-direction: column; }
-    .about-intro-right { flex-direction: column; }
-    .about-img-building, .about-img-interior, .about-img-warehouse { height: 220px; }
+@media (max-width: 560px) {
+    .about-intro-section { padding: 50px 20px; }
+    .about-intro-right-grid { grid-template-columns: 1fr; }
+    .about-img-building, .about-img-interior, .about-img-warehouse { height: 200px; }
     .about-community-left { padding: 36px 24px; }
     .about-community-heading { font-size: 24px; }
 }
@@ -518,40 +544,44 @@ body {
         </div>
     </div>
 
-    <!-- MIDDLE: Factory images -->
-    <div class="about-intro-middle">
-        <img
-            class="about-img-building"
-            src="https://pangugreen.com/wp-content/uploads/2024/03/factory.jpg"
-            alt="Golden Bean Paint Technology factory building"
-            onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&q=80'"
-        >
-        <img
-            class="about-img-interior"
-            src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&q=85"
-            alt="Factory interior with production equipment"
-        >
-    </div>
-
-    <!-- RIGHT: Blue info card + warehouse image -->
+    <!-- RIGHT: nested 2-col image grid -->
     <div class="about-intro-right">
-        <div class="about-blue-card">
-            <p>At present, the company mainly produces and operates products including floor paint series, interior wall paint series, interior wall art paint series, cultural stone series, exterior wall paint series, and water-based industrial paint series.</p>
-            <div class="about-blue-card-company">
+        <div class="about-intro-right-grid">
+            <!-- Sub-col 1: factory images -->
+            <div class="about-intro-right-col">
                 <img
-                    class="about-blue-card-logo"
-                    src="https://pangugreen.com/wp-content/uploads/2026/05/logo-180x29.webp"
-                    alt="Golden Bean logo"
-                    onerror="this.style.display='none'"
+                    class="about-img-building"
+                    src="https://pangugreen.com/wp-content/uploads/2024/03/factory.jpg"
+                    alt="Golden Bean Paint Technology factory building"
+                    onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&q=80'"
                 >
-                <span class="about-blue-card-name">Golden Bean Paint Technology Co., Ltd</span>
+                <img
+                    class="about-img-interior"
+                    src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&q=85"
+                    alt="Factory interior with production equipment"
+                >
+            </div>
+            <!-- Sub-col 2: blue info card + warehouse -->
+            <div class="about-intro-right-col">
+                <div class="about-blue-card">
+                    <p>At present, the company mainly produces and operates products including floor paint series, interior wall paint series, interior wall art paint series, cultural stone series, exterior wall paint series, and water-based industrial paint series.</p>
+                    <div class="about-blue-card-company">
+                        <img
+                            class="about-blue-card-logo"
+                            src="https://pangugreen.com/wp-content/uploads/2026/05/logo-180x29.webp"
+                            alt="Golden Bean logo"
+                            onerror="this.style.display='none'"
+                        >
+                        <span class="about-blue-card-name">Golden Bean Paint Technology Co., Ltd</span>
+                    </div>
+                </div>
+                <img
+                    class="about-img-warehouse"
+                    src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=600&q=80"
+                    alt="Warehouse and factory exterior"
+                >
             </div>
         </div>
-        <img
-            class="about-img-warehouse"
-            src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=600&q=80"
-            alt="Warehouse and factory exterior"
-        >
     </div>
 
 </section>
