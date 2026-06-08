@@ -214,85 +214,194 @@ var woocommerce_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax_url":
 <style>
                 
                 </style><style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 *, *::before, *::after { box-sizing: border-box; }
-html, body { background: #fff; }
+html, body { background: #fff; font-family: 'Inter', sans-serif; }
 
-/* ── HERO BANNER ── */
-.page-title-section {
-    background: linear-gradient(135deg, #2d5a27 0%, #4a8f40 100%);
-    color: #fff; padding: 72px 30px; text-align: center;
+/* ── PAGE FADE-IN ── */
+@keyframes fadeInUp { from { opacity:0; transform:translateY(18px); } to { opacity:1; transform:none; } }
+.contact-page-section { animation: fadeInUp .55s ease both; }
+
+/* ── MAIN CONTACT SECTION ── */
+.contact-page-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 70px 40px 80px;
+    display: flex;
+    gap: 0;
+    align-items: flex-start;
+    min-height: 600px;
 }
-.page-title-section h1 { font-size: 2.6rem; margin: 0 0 10px; font-weight: 700; letter-spacing: -.5px; }
-.page-title-section p  { font-size: 1.1rem; margin: 0; opacity: .88; }
 
-/* ── ABOUT PAGE ── */
-.page-content { max-width: 1200px; margin: 70px auto; padding: 0 30px; }
-.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; margin-bottom: 70px; }
-.about-grid.reverse { direction: rtl; }
-.about-grid.reverse > * { direction: ltr; }
-.about-img img { width: 100%; border-radius: 14px; box-shadow: 0 12px 48px rgba(0,0,0,0.11); display: block; }
-.about-text h2 { font-size: 1.85rem; font-weight: 700; color: #2d5a27; margin: 0 0 18px; }
-.about-text p  { font-size: 1rem; line-height: 1.85; color: #555; margin-bottom: 14px; }
+/* ── LEFT: FAQ ── */
+.faq-col {
+    flex: 1 1 50%;
+    padding-right: 56px;
+}
+.faq-col .col-subtitle {
+    font-size: .8rem;
+    font-weight: 500;
+    color: #888;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    margin: 0 0 10px;
+}
+.faq-col .col-title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #111;
+    margin: 0 0 32px;
+    line-height: 1.25;
+}
+.faq-list { list-style: none; padding: 0; margin: 0; }
+.faq-item { border-top: 1px solid #e5e5e5; }
+.faq-item:last-child { border-bottom: 1px solid #e5e5e5; }
+.faq-question {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 0;
+    cursor: pointer;
+    font-size: .97rem;
+    font-weight: 600;
+    color: #0A6B43;
+    transition: color .18s;
+    gap: 12px;
+    user-select: none;
+}
+.faq-question:hover { color: #085c39; }
+.faq-question .faq-icon {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform .25s;
+}
+.faq-question .faq-icon { transform: rotate(180deg); }
+.faq-item.open .faq-question .faq-icon { transform: rotate(0deg); }
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .3s ease, padding .25s ease;
+}
+.faq-answer p {
+    font-size: .93rem;
+    color: #888;
+    line-height: 1.75;
+    padding: 0 0 18px;
+    margin: 0;
+}
+.faq-item.open .faq-answer { max-height: 300px; }
 
-/* ── STATS ── */
-.stats-section { background: #f4f8f3; padding: 64px 30px; text-align: center; }
-.stats-section h2 { font-size: 1.85rem; font-weight: 700; color: #2d5a27; margin-bottom: 44px; }
-.stats-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 28px; max-width: 960px; margin: 0 auto; }
-.stat-box { background: #fff; border-radius: 14px; padding: 32px 20px; box-shadow: 0 4px 24px rgba(45,90,39,0.08); }
-.stat-box .num   { font-size: 2.6rem; font-weight: 700; color: #2d5a27; margin-bottom: 8px; line-height: 1; }
-.stat-box .label { font-size: .9rem; color: #777; font-weight: 500; }
+/* ── VERTICAL DIVIDER ── */
+.contact-divider {
+    width: 1px;
+    background: #e5e5e5;
+    align-self: stretch;
+    flex-shrink: 0;
+    margin: 0;
+}
 
-/* ── VALUES ── */
-.values-section { max-width: 1200px; margin: 0 auto; padding: 70px 30px; }
-.values-section h2 { font-size: 1.85rem; font-weight: 700; color: #2d5a27; text-align: center; margin-bottom: 44px; }
-.values-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 28px; }
-.value-card { background:#fff; border:1.5px solid #e8f0e6; border-radius:14px; padding:32px 24px; text-align:center; box-shadow:0 2px 16px rgba(45,90,39,.06); transition:transform .2s,box-shadow .2s; }
-.value-card:hover { transform:translateY(-5px); box-shadow:0 10px 36px rgba(45,90,39,.13); }
-.value-card .vc-icon { width:56px;height:56px;background:#eaf4e7;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 18px; }
-.value-card .vc-icon svg { width:26px;height:26px; }
-.value-card h3 { font-size:1.05rem;font-weight:700;color:#2d5a27;margin:0 0 10px; }
-.value-card p  { font-size:.93rem;color:#666;line-height:1.75;margin:0; }
+/* ── RIGHT: CONTACT FORM ── */
+.form-col {
+    flex: 1 1 50%;
+    padding-left: 56px;
+}
+.form-col .col-subtitle {
+    font-size: .8rem;
+    font-weight: 500;
+    color: #888;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    margin: 0 0 10px;
+}
+.form-col .col-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #111;
+    margin: 0 0 28px;
+    line-height: 1.3;
+    letter-spacing: .01em;
+}
+.cf-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+.cf-field { margin-bottom: 16px; }
+.cf-field label {
+    display: block;
+    font-size: .82rem;
+    font-weight: 500;
+    color: #555;
+    margin-bottom: 7px;
+}
+.cf-field input,
+.cf-field textarea {
+    width: 100%;
+    height: 48px;
+    padding: 0 14px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: .93rem;
+    font-family: inherit;
+    color: #333;
+    background: #fff;
+    outline: none;
+    transition: border-color .18s, box-shadow .18s;
+}
+.cf-field textarea {
+    height: 120px;
+    padding: 12px 14px;
+    resize: vertical;
+}
+.cf-field input:focus,
+.cf-field textarea:focus {
+    border-color: #0A6B43;
+    box-shadow: 0 0 0 3px rgba(10,107,67,.08);
+}
+.cf-row .cf-field { margin-bottom: 0; }
+.btn-ask {
+    background: #0A6B43;
+    color: #fff;
+    border: none;
+    height: 50px;
+    padding: 0 32px;
+    border-radius: 4px;
+    font-size: .9rem;
+    font-weight: 600;
+    font-family: inherit;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background .2s, box-shadow .2s, transform .15s;
+    box-shadow: 0 2px 8px rgba(10,107,67,.18);
+    margin-top: 4px;
+}
+.btn-ask:hover {
+    background: #085c39;
+    box-shadow: 0 6px 20px rgba(10,107,67,.28);
+    transform: translateY(-1px);
+}
+.cf-success {
+    display: none;
+    margin-top: 14px;
+    background: #eaf4ee;
+    border: 1px solid #a5d6a7;
+    color: #0A6B43;
+    padding: 12px 16px;
+    border-radius: 4px;
+    font-size: .9rem;
+    font-weight: 600;
+}
 
-/* ── CONTACT PAGE ── */
-.contact-wrapper { max-width:1200px;margin:64px auto;padding:0 30px;display:grid;grid-template-columns:1fr 1.25fr;gap:56px; }
-.contact-info h2 { font-size:1.85rem;font-weight:700;color:#2d5a27;margin:0 0 16px; }
-.contact-info > p { font-size:1rem;line-height:1.82;color:#555;margin-bottom:32px; }
-.info-item { display:flex;align-items:flex-start;gap:16px;margin-bottom:26px; }
-.info-icon { width:48px;height:48px;flex-shrink:0;background:#eaf4e7;border-radius:50%;display:flex;align-items:center;justify-content:center; }
-.info-icon svg { width:22px;height:22px; }
-.info-detail h4 { font-size:.95rem;font-weight:700;color:#2d5a27;margin:0 0 4px; }
-.info-detail p,.info-detail a { font-size:.93rem;color:#555;margin:0;text-decoration:none;line-height:1.65; }
-.info-detail a:hover { color:#2d5a27;text-decoration:underline; }
-.social-row { display:flex;gap:12px;margin-top:28px; }
-.social-btn { width:42px;height:42px;background:#eaf4e7;border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;transition:background .2s; }
-.social-btn:hover { background:#c8e6c0; }
-.social-btn svg { width:18px;height:18px; }
-.contact-form { background:#fff;border:1.5px solid #e0edd9;border-radius:16px;padding:40px 36px;box-shadow:0 6px 36px rgba(45,90,39,.07); }
-.contact-form h2 { font-size:1.45rem;font-weight:700;color:#2d5a27;margin:0 0 28px; }
-.form-row { margin-bottom:20px; }
-.form-row label { display:block;font-size:.88rem;font-weight:600;color:#444;margin-bottom:6px; }
-.form-row input,.form-row select,.form-row textarea { width:100%;padding:11px 14px;border:1.5px solid #d8e8d4;border-radius:8px;font-size:.95rem;font-family:inherit;color:#333;outline:none;transition:border-color .18s;background:#fff; }
-.form-row input:focus,.form-row select:focus,.form-row textarea:focus { border-color:#2d5a27; }
-.form-row textarea { height:130px;resize:vertical; }
-.form-2col { display:grid;grid-template-columns:1fr 1fr;gap:16px; }
-.btn-submit { background:#2d5a27;color:#fff;border:none;padding:13px 0;border-radius:8px;font-size:1rem;font-weight:600;font-family:inherit;cursor:pointer;width:100%;transition:background .2s; }
-.btn-submit:hover { background:#1e3d1b; }
-.success-msg { display:none;margin-top:16px;background:#eaf4e7;border:1.5px solid #a5d6a7;color:#2d5a27;padding:14px 18px;border-radius:8px;text-align:center;font-weight:600;font-size:.95rem; }
-.map-section { max-width:1200px;margin:0 auto 64px;padding:0 30px; }
-.map-section h2 { font-size:1.45rem;font-weight:700;color:#2d5a27;margin-bottom:18px; }
-.map-box { background:#f4f8f3;border-radius:14px;height:300px;display:flex;align-items:center;justify-content:center;flex-direction:column;border:2px dashed #b8d9b0;gap:12px; }
-.map-box svg { width:40px;height:40px; }
-.map-box p { font-size:.95rem;color:#6d9e67;margin:0; }
-
-@media (max-width:900px) {
-    .about-grid { grid-template-columns:1fr;gap:32px; }
-    .about-grid.reverse { direction:ltr; }
-    .stats-grid { grid-template-columns:repeat(2,1fr); }
-    .values-grid { grid-template-columns:1fr; }
-    .contact-wrapper { grid-template-columns:1fr;gap:36px; }
-    .form-2col { grid-template-columns:1fr; }
-    .page-title-section h1 { font-size:1.9rem; }
-    .contact-form { padding:26px 20px; }
+@media (max-width: 900px) {
+    .contact-page-section { flex-direction: column; padding: 40px 24px 60px; }
+    .faq-col { padding-right: 0; margin-bottom: 40px; }
+    .contact-divider { display: none; }
+    .form-col { padding-left: 0; }
+    .cf-row { grid-template-columns: 1fr; }
+}
+@media (max-width: 540px) {
+    .faq-col .col-title { font-size: 1.4rem; }
 }
 </style>
 </head>
@@ -440,136 +549,122 @@ html, body { background: #fff; }
                                 </header>
 
 <div class="main-page-wrapper">
-<div class="page-title-section">
-    <h1>Contact Us</h1>
-    <p>We'd love to hear from you — get in touch with our team</p>
-</div>
 
-<!-- ════════════ CONTACT CONTENT ════════════ -->
-<div class="contact-wrapper">
+<!-- ════════════ CONTACT PAGE ════════════ -->
+<section class="contact-page-section">
 
-    <!-- INFO -->
-    <div class="contact-info">
-        <h2>Get In Touch</h2>
-        <p>Whether you have questions about our products, need technical advice, or want to become a distributor — our team is ready to help.</p>
-
-        <div class="info-item">
-            <div class="info-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="#2d5a27" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 1 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            </div>
-            <div class="info-detail">
-                <h4>Address</h4>
-                <p>Golden Bean Industrial Zone,<br>Guangdong Province, China</p>
-            </div>
-        </div>
-
-        <div class="info-item">
-            <div class="info-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="#2d5a27" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.4 2 2 0 0 1 3.6 1.22h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.78a16 16 0 0 0 6.29 6.29l.95-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-            </div>
-            <div class="info-detail">
-                <h4>Phone / WhatsApp</h4>
-                <a href="https://wa.me/8613800000000" target="_blank">+86 138 0000 0000</a>
-            </div>
-        </div>
-
-        <div class="info-item">
-            <div class="info-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="#2d5a27" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-            </div>
-            <div class="info-detail">
-                <h4>Email</h4>
-                <a href="mailto:info@pangugreen.com">info@pangugreen.com</a>
-            </div>
-        </div>
-
-        <div class="info-item">
-            <div class="info-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="#2d5a27" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-            </div>
-            <div class="info-detail">
-                <h4>Business Hours</h4>
-                <p>Mon – Fri: 8:00 AM – 6:00 PM (CST)<br>Sat: 9:00 AM – 3:00 PM</p>
-            </div>
-        </div>
-
-        <div class="social-row">
-            <!-- WhatsApp -->
-            <a href="https://wa.me/8613800000000" target="_blank" class="social-btn" title="WhatsApp">
-                <svg viewBox="0 0 24 24" fill="#2d5a27"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M11.928 0C5.338 0 0 5.338 0 11.928c0 2.115.556 4.1 1.528 5.82L0 24l6.418-1.501A11.9 11.9 0 0 0 11.928 24C18.517 24 24 18.518 24 11.928 24 5.338 18.517 0 11.928 0zm0 21.818a9.878 9.878 0 0 1-5.032-1.37l-.361-.214-3.741.981.998-3.648-.235-.374a9.886 9.886 0 0 1-1.516-5.265c0-5.455 4.44-9.895 9.895-9.895s9.895 4.44 9.895 9.895-4.44 9.89-9.903 9.89z"/></svg>
-            </a>
-            <!-- Facebook -->
-            <a href="javascript:void(0)" class="social-btn" title="Facebook">
-                <svg viewBox="0 0 24 24" fill="#2d5a27"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
-            </a>
-            <!-- Instagram -->
-            <a href="javascript:void(0)" class="social-btn" title="Instagram">
-                <svg viewBox="0 0 24 24" fill="none" stroke="#2d5a27" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="#2d5a27" stroke="none"/></svg>
-            </a>
-            <!-- LinkedIn -->
-            <a href="javascript:void(0)" class="social-btn" title="LinkedIn">
-                <svg viewBox="0 0 24 24" fill="#2d5a27"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-            </a>
-        </div>
+    <!-- LEFT: FAQ -->
+    <div class="faq-col">
+        <p class="col-subtitle">Information questions</p>
+        <h2 class="col-title">Frequently Asked Questions</h2>
+        <ul class="faq-list" id="faqList">
+            <li class="faq-item open">
+                <div class="faq-question">
+                    Will I receive the same product that I see in the picture?
+                    <span class="faq-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0A6B43" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg></span>
+                </div>
+                <div class="faq-answer">
+                    <p>Yes, the product you receive will be exactly the same as shown in the picture. We ensure that the physical product matches the promotional image, so please feel free to purchase with confidence!</p>
+                </div>
+            </li>
+            <li class="faq-item">
+                <div class="faq-question">
+                    Where can I view my sales receipt?
+                    <span class="faq-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0A6B43" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg></span>
+                </div>
+                <div class="faq-answer">
+                    <p>Your sales receipt is sent to your registered email address immediately after purchase. You can also log into your account and navigate to the Order History section to download it at any time.</p>
+                </div>
+            </li>
+            <li class="faq-item">
+                <div class="faq-question">
+                    How can I return an item?
+                    <span class="faq-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0A6B43" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg></span>
+                </div>
+                <div class="faq-answer">
+                    <p>Please contact our support team within 14 days of delivery. We will guide you through the return process and arrange a pickup or return shipping label at no cost to you for defective items.</p>
+                </div>
+            </li>
+            <li class="faq-item">
+                <div class="faq-question">
+                    Will you restock items indicated as "out of stock?"
+                    <span class="faq-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0A6B43" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg></span>
+                </div>
+                <div class="faq-answer">
+                    <p>Most out-of-stock items are restocked within 2–4 weeks. You can click "Notify Me" on the product page and we will send you an email the moment it becomes available again.</p>
+                </div>
+            </li>
+            <li class="faq-item">
+                <div class="faq-question">
+                    Where can I ship my order?
+                    <span class="faq-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0A6B43" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg></span>
+                </div>
+                <div class="faq-answer">
+                    <p>We ship worldwide. During checkout, simply enter your delivery address and available shipping options along with estimated delivery times will be shown for your location.</p>
+                </div>
+            </li>
+        </ul>
     </div>
 
-    <!-- FORM -->
-    <div class="contact-form">
-        <h2>Send Us a Message</h2>
-        <form id="contactForm" onsubmit="handleSubmit(event)">
-            <div class="form-2col">
-                <div class="form-row">
-                    <label for="fname">First Name *</label>
-                    <input type="text" id="fname" placeholder="John" required>
+    <!-- DIVIDER -->
+    <div class="contact-divider"></div>
+
+    <!-- RIGHT: CONTACT FORM -->
+    <div class="form-col">
+        <p class="col-subtitle">Information about us</p>
+        <h2 class="col-title">CONTACT US FOR ANY QUESTIONS</h2>
+        <form id="contactForm" onsubmit="handleContactSubmit(event)">
+            <div class="cf-row">
+                <div class="cf-field">
+                    <label for="cf-name">Your Name</label>
+                    <input type="text" id="cf-name" placeholder="" required>
                 </div>
-                <div class="form-row">
-                    <label for="lname">Last Name *</label>
-                    <input type="text" id="lname" placeholder="Doe" required>
+                <div class="cf-field">
+                    <label for="cf-email">Your Email</label>
+                    <input type="email" id="cf-email" placeholder="" required>
                 </div>
             </div>
-            <div class="form-row">
-                <label for="email">Email Address *</label>
-                <input type="email" id="email" placeholder="john@example.com" required>
+            <div class="cf-row">
+                <div class="cf-field">
+                    <label for="cf-phone">Phone Number</label>
+                    <input type="tel" id="cf-phone" placeholder="">
+                </div>
+                <div class="cf-field">
+                    <label for="cf-company">Company</label>
+                    <input type="text" id="cf-company" placeholder="">
+                </div>
             </div>
-            <div class="form-row">
-                <label for="phone">Phone / WhatsApp</label>
-                <input type="tel" id="phone" placeholder="+1 234 567 8900">
+            <div class="cf-field">
+                <label for="cf-message">Your Message</label>
+                <textarea id="cf-message" placeholder="" required></textarea>
             </div>
-            <div class="form-row">
-                <label for="subject">Subject *</label>
-                <select id="subject" required>
-                    <option value="">— Select a topic —</option>
-                    <option value="product">Product Inquiry</option>
-                    <option value="distributor">Become a Distributor</option>
-                    <option value="technical">Technical Support</option>
-                    <option value="quote">Request a Quote</option>
-                    <option value="other">Other</option>
-                </select>
-            </div>
-            <div class="form-row">
-                <label for="message">Message *</label>
-                <textarea id="message" placeholder="Tell us how we can help you..." required></textarea>
-            </div>
-            <button type="submit" class="btn-submit">Send Message</button>
-            <div class="success-msg" id="successMsg">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2d5a27" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;margin-right:6px;"><polyline points="20 6 9 17 4 12"/></svg>
+            <button type="submit" class="btn-ask">ASK A QUESTION</button>
+            <div class="cf-success" id="cfSuccess">
                 Your message has been sent! We will get back to you within 24 hours.
             </div>
         </form>
     </div>
 
-</div><!-- /.contact-wrapper -->
+</section>
 
-<!-- ════════════ MAP ════════════ -->
-<div class="map-section">
-    <h2>Find Us</h2>
-    <div class="map-box">
-        <svg viewBox="0 0 24 24" fill="none" stroke="#4a8f40" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 1 1 18 0z"/><circle cx="12" cy="10" r="3"/>
-        </svg>
-        <p>Golden Bean Industrial Zone, Guangdong Province, China</p>
-    </div>
-</div>
+<script>
+(function() {
+    var items = document.querySelectorAll('#faqList .faq-item');
+    items.forEach(function(item) {
+        item.querySelector('.faq-question').addEventListener('click', function() {
+            var isOpen = item.classList.contains('open');
+            items.forEach(function(i) { i.classList.remove('open'); });
+            if (!isOpen) item.classList.add('open');
+        });
+    });
+})();
+
+function handleContactSubmit(e) {
+    e.preventDefault();
+    document.getElementById('cfSuccess').style.display = 'block';
+    e.target.reset();
+}
+</script>
 
 <!-- ════════════ FOOTER ════════════ -->
                         <footer class="footer-container color-scheme-light">

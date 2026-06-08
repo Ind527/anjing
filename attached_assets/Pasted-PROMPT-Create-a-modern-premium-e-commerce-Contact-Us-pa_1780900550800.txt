@@ -1,0 +1,97 @@
+PROMPT
+Create a modern, premium e-commerce Contact Us page that closely follows the layout and style of the reference image.
+Overall Layout
+Clean white background.
+Large centered container with two columns.
+Left column width: 50%.
+Right column width: 50%.
+Plenty of white space and elegant spacing.
+Professional B2B export company appearance.
+Header Section
+Keep the existing website navbar design unchanged.
+Navigation menu centered:
+Home
+Products
+Blog
+About Us
+Contact Us (active state with green color)
+Login/Register and shopping icons on the right.
+Main Content Section
+Left Side – FAQ Section
+Display:
+Small subtitle:
+"Information questions"
+Large title:
+"Frequently Asked Questions"
+Create an accordion FAQ list with thin gray dividers.
+Questions:
+Will I receive the same product that I see in the picture?
+Where can I view my sales receipt?
+How can I return an item?
+Will you restock items indicated as "out of stock?"
+Where can I ship my order?
+Requirements:
+First accordion expanded by default.
+Question text dark green (#0A6B43).
+Answer text light gray.
+Smooth accordion animation.
+Hover effect.
+Minimalist WooCommerce-style design.
+Right Side – Contact Form
+Small subtitle:
+"Information about us"
+Large heading:
+"CONTACT US FOR ANY QUESTIONS"
+Form fields in two-column layout:
+Row 1:
+Your Name
+Your Email
+Row 2:
+Phone Number
+Company
+Row 3:
+Your Message (full width textarea)
+Field styling:
+White background.
+Light gray border.
+Height 48px.
+Rounded corners 4px.
+Smooth focus effect.
+Focus border color green.
+Button:
+Text: ASK A QUESTION
+Dark green background (#0A6B43)
+White text
+Height 50px
+Rounded corners
+Hover animation
+Slight shadow
+Divider
+Add a thin vertical divider line between FAQ section and Contact Form.
+Responsive Design
+Tablet:
+Two columns remain if space allows.
+Mobile:
+Stack FAQ above Contact Form.
+Full-width form fields.
+Comfortable spacing.
+Visual Style
+Inspired by premium WooCommerce stores.
+Elegant typography.
+Font: Inter or Poppins.
+Clean export company design.
+Professional B2B supplier appearance.
+Minimalist and modern.
+Animations
+Fade-in when page loads.
+Accordion slide animation.
+Button hover transition.
+Input focus transition.
+Technical Requirements
+HTML5
+CSS3
+Responsive Flexbox/Grid
+No external frameworks
+SEO-friendly structure
+Fast loading
+The final design should look nearly identical to the provided reference image, with a clean white layout, left FAQ accordion section, right contact form section, subtle gray borders, dark green accents, and premium e-commerce styling.
