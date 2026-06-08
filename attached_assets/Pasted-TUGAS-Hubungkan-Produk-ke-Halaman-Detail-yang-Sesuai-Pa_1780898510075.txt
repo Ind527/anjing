@@ -1,0 +1,60 @@
+TUGAS: Hubungkan Produk ke Halaman Detail yang Sesuai
+Pada file index.html, products.html, atau halaman lain yang menampilkan daftar produk, hubungkan produk berikut ke halaman detail HTML yang sesuai:
+1. High-Gloss Floor Lacquer – Durable, Fast-Drying Protection
+Saat pengguna mengklik:
+Gambar produk utama
+Gambar hover
+Nama/Judul produk
+Tombol "Select Options"
+Tombol "View Details"
+Seluruh area kartu produk
+arahkan ke:
+html1.html
+2. Waterproof Glue – Strong, Permanent Bond for Indoor & Outdoor Use
+Saat pengguna mengklik:
+Gambar produk utama
+Gambar hover
+Nama/Judul produk
+Tombol "Select Options"
+Tombol "View Details"
+Seluruh area kartu produk
+arahkan ke:
+html2.html
+3. Metallic Paint – Premium Shine for Walls, Furniture & DIY Crafts
+Saat pengguna mengklik:
+Gambar produk utama
+Gambar hover
+Nama/Judul produk
+Tombol "Select Options"
+Tombol "View Details"
+Seluruh area kartu produk
+arahkan ke:
+html3.html
+4. Tile Paint – Waterproof, Durable Finish for Bathroom & Kitchen Tiles
+Saat pengguna mengklik:
+Gambar produk utama
+Gambar hover
+Nama/Judul produk
+Tombol "Select Options"
+Tombol "View Details"
+Seluruh area kartu produk
+arahkan ke:
+html3.html
+Persyaratan
+Gunakan link HTML yang benar dengan atribut:
+target="_self"
+Pastikan navigasi membuka halaman pada tab yang sama.
+Pastikan file tujuan benar-benar ada dan tidak menghasilkan halaman 404.
+Jika kartu produk masih menggunakan <div class="product-card">, bungkus seluruh kartu dengan tag <a href="..."> agar seluruh area kartu dapat diklik.
+Hapus atau perbaiki JavaScript yang menghalangi navigasi seperti:
+event.preventDefault();
+return false;
+Pastikan tidak ada event Add to Cart atau WooCommerce yang berjalan saat pengguna hanya ingin membuka halaman detail produk.
+Jangan mengubah desain, layout, CSS, animasi, responsivitas, atau struktur visual website.
+Hasil yang Diharapkan
+Produk	Halaman Tujuan
+High-Gloss Floor Lacquer – Durable, Fast-Drying Protection	html1.html
+Waterproof Glue – Strong, Permanent Bond for Indoor & Outdoor Use	html2.html
+Metallic Paint – Premium Shine for Walls, Furniture & DIY Crafts	html3.html
+Tile Paint – Waterproof, Durable Finish for Bathroom & Kitchen Tiles	html3.html
+Verifikasi bahwa setiap produk benar-benar membuka halaman yang sesuai saat diklik, bukan menjalankan Add to Cart, popup, atau fungsi lain.
