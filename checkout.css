@@ -7,7 +7,7 @@
   --ck-primary:     #2d5a27;
   --ck-primary-dk:  #1e3d1b;
   --ck-primary-lt:  #f0f7ee;
-  --ck-border:      #e8f0e6;
+  --ck-border:      #d1d5db;
   --ck-text:        #222;
   --ck-muted:       #666;
   --ck-radius:      10px;
@@ -144,7 +144,7 @@
 .ck-field textarea {
   width: 100%;
   padding: 11px 14px;
-  border: 1.5px solid #d5e3d3;
+  border: 1.5px solid #d1d5db;
   border-radius: 7px;
   font-family: var(--ck-font);
   font-size: 14px;
@@ -168,8 +168,8 @@
 .ck-field input:focus,
 .ck-field select:focus,
 .ck-field textarea:focus {
-  border-color: var(--ck-primary);
-  box-shadow: 0 0 0 3px rgba(45,90,39,.1);
+  border-color: #9ca3af;
+  box-shadow: 0 0 0 3px rgba(156,163,175,.15);
 }
 .ck-field input.error,
 .ck-field select.error {
@@ -293,7 +293,7 @@
   display: inline-block;
   background: #eef6ec;
   color: #2d5a27;
-  border: 1px solid #c4dfc0;
+  border: 1px solid #d1d5db;
   border-radius: 4px;
   font-size: 11px;
   font-weight: 600;
@@ -399,7 +399,7 @@
 /* ---- Shipping card ---- */
 .ck-shipping-card {
   background: var(--ck-primary-lt);
-  border: 1.5px solid #c8e4c3;
+  border: 1.5px solid #d1d5db;
   border-radius: 8px;
   padding: 14px 16px;
   display: flex;
