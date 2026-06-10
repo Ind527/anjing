@@ -31,7 +31,7 @@
 
 <!-- ===================== NAVBAR ===================== -->
 <div class="website-wrapper">
-  <header class="whb-header whb-header_439246 whb-sticky-shadow whb-scroll-slide whb-sticky-real">
+  <header class="whb-header whb-header_439246 whb-overcontent whb-sticky-shadow whb-scroll-slide whb-sticky-real">
     <div class="whb-main-header">
       <div class="whb-row whb-general-header whb-sticky-row whb-without-bg whb-without-border whb-color-dark whb-flex-flex-middle">
         <div class="container">
@@ -41,50 +41,63 @@
             <div class="whb-column whb-col-left whb-visible-lg">
               <div class="site-logo">
                 <a href="./index.html" class="wd-logo wd-main-logo" rel="home" aria-label="Link">
-                  <img fetchpriority="high" width="1600" height="304"
-                    src="https://pangugreen.com/wp-content/uploads/2026/05/logo.webp"
-                    class="attachment-full size-full" alt="" style="max-width:180px;"
-                    srcset="https://pangugreen.com/wp-content/uploads/2026/05/logo.webp 1600w,https://pangugreen.com/wp-content/uploads/2026/05/logo-300x57.webp 300w,https://pangugreen.com/wp-content/uploads/2026/05/logo-1024x195.webp 1024w"
-                    sizes="(max-width:1600px) 100vw,1600px" loading="lazy">
+                  <img fetchpriority="high" width="1600" height="304" src="https://pangugreen.com/wp-content/uploads/2026/05/logo.webp" class="attachment-full size-full" alt="" style="max-width:180px;" decoding="async" srcset="https://pangugreen.com/wp-content/uploads/2026/05/logo.webp 1600w, https://pangugreen.com/wp-content/uploads/2026/05/logo-300x57.webp 300w, https://pangugreen.com/wp-content/uploads/2026/05/logo-1024x195.webp 1024w, https://pangugreen.com/wp-content/uploads/2026/05/logo-768x146.webp 768w, https://pangugreen.com/wp-content/uploads/2026/05/logo-1536x292.webp 1536w, https://pangugreen.com/wp-content/uploads/2026/05/logo-1200x228.webp 1200w, https://pangugreen.com/wp-content/uploads/2026/05/logo-148x28.webp 148w" sizes="(max-width: 1600px) 100vw, 1600px" loading="lazy">
                 </a>
               </div>
-              <div class="whb-space-element" style="width:30px"></div>
+              <div class="whb-space-element" style="width:30px;"></div>
             </div>
 
             <!-- Navigation — desktop -->
             <div class="whb-column whb-col-center whb-visible-lg">
               <div class="wd-header-nav wd-header-main-nav text-left wd-design-1" role="navigation" aria-label="Main navigation">
-                <ul class="menu wd-nav wd-nav-main wd-style-default wd-gap-m">
-                  <li class="menu-item item-level-0 menu-simple-dropdown wd-event-hover">
-                    <a href="./index.html" class="woodmart-nav-link"><span class="nav-link-text">Home</span></a>
-                  </li>
-                  <li class="menu-item item-level-0 menu-simple-dropdown wd-event-hover">
-                    <a href="./product.html" class="woodmart-nav-link"><span class="nav-link-text">Products</span></a>
-                  </li>
-                  <li class="menu-item item-level-0 menu-simple-dropdown wd-event-hover">
-                    <a href="./about.html" class="woodmart-nav-link"><span class="nav-link-text">About Us</span></a>
-                  </li>
-                  <li class="menu-item item-level-0 menu-simple-dropdown wd-event-hover">
-                    <a href="./contact.html" class="woodmart-nav-link"><span class="nav-link-text">Contact Us</span></a>
-                  </li>
+                <ul id="menu-main-header-navigation-1" class="menu wd-nav wd-nav-main wd-style-default wd-gap-m">
+                  <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10587 item-level-0 menu-simple-dropdown wd-event-hover"><a href="./index.html" class="woodmart-nav-link" data-nce-hover-nav="true"><span class="nav-link-text">Home</span></a></li>
+                  <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10591 item-level-0 menu-simple-dropdown wd-event-hover"><a href="./product.html" class="woodmart-nav-link" data-nce-hover-nav="true"><span class="nav-link-text">Products</span></a></li>
+                  <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9517 item-level-0 menu-simple-dropdown wd-event-hover"><a href="./blog.html" class="woodmart-nav-link" data-nce-hover-nav="true"><span class="nav-link-text">Blog</span></a></li>
+                  <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9518 item-level-0 menu-simple-dropdown wd-event-hover"><a href="./about.html" class="woodmart-nav-link" data-nce-hover-nav="true"><span class="nav-link-text">About Us</span></a></li>
+                  <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9519 item-level-0 menu-simple-dropdown wd-event-hover"><a href="./contact.html" class="woodmart-nav-link" data-nce-hover-nav="true"><span class="nav-link-text">Contact Us</span></a></li>
                 </ul>
               </div>
             </div>
 
             <!-- Right tools — desktop -->
             <div class="whb-column whb-col-right whb-visible-lg">
-              <div class="wd-header-cart wd-tools-element wd-design-2">
-                <a href="./checkout.html" style="display:flex;align-items:center;gap:6px;font-family:'Jost',sans-serif;font-size:14px;color:#2d5a27;font-weight:600">
-                  <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
-                  Checkout
+              <div class="wd-header-my-account wd-tools-element wd-event-hover wd-design-1 wd-account-style-text login-side-opener whb-vssfpylqqax9pvkfnxoz">
+                <a href="javascript:void(0)" title="My account" data-nce-hover-nav="true" style="cursor: default;">
+                  <span class="wd-tools-icon"></span>
+                  <span class="wd-tools-text">Login / Register</span>
+                </a>
+              </div>
+              <div class="wd-header-search wd-tools-element wd-design-1 wd-style-icon wd-display-full-screen whb-b4kxh9l1h7b6t8r1zfh9" title="Search">
+                <a href="javascript:void(0);" aria-label="Search" target="_top" data-nce-hover-nav="true">
+                  <span class="wd-tools-icon"></span>
+                  <span class="wd-tools-text">Search</span>
+                </a>
+              </div>
+              <div class="wd-header-compare wd-tools-element wd-style-icon wd-with-count wd-design-2 whb-z71sozotxn0s5a0nfm7a">
+                <a href="javascript:void(0)" title="Compare products" data-nce-hover-nav="true" style="cursor: default;">
+                  <span class="wd-tools-icon"><span class="wd-tools-count">0</span></span>
+                  <span class="wd-tools-text">Compare</span>
+                </a>
+              </div>
+              <div class="wd-header-wishlist wd-tools-element wd-style-icon wd-with-count wd-design-2 whb-a22wdkiy3r40yw2paskq" title="My Wishlist">
+                <a href="javascript:void(0)" data-nce-hover-nav="true" style="cursor: default;">
+                  <span class="wd-tools-icon"><span class="wd-tools-count">0</span></span>
+                  <span class="wd-tools-text">Wishlist</span>
+                </a>
+              </div>
+              <div class="wd-header-cart wd-tools-element wd-design-2 cart-widget-opener whb-6ivlq8kef7blyepibxz1">
+                <a href="javascript:void(0)" title="Shopping cart" style="cursor: default;">
+                  <span class="wd-tools-icon"><span class="wd-cart-number wd-tools-count">0 <span>items</span></span></span>
+                  <span class="wd-tools-text"><span class="wd-cart-subtotal"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">$</span>0.00</bdi></span></span></span>
                 </a>
               </div>
             </div>
 
             <!-- Mobile hamburger -->
             <div class="whb-column whb-mobile-left whb-hidden-lg">
-              <div class="wd-tools-element wd-header-mobile-nav wd-style-icon wd-design-1">
-                <a href="#" rel="nofollow" aria-label="Open mobile menu">
+              <div class="wd-tools-element wd-header-mobile-nav wd-style-icon wd-design-1 whb-g1k0m1tib7raxrwkm1t3">
+                <a href="#" rel="nofollow" aria-label="Open mobile menu" data-nce-hover-nav="true">
                   <span class="wd-tools-icon"></span>
                   <span class="wd-tools-text">Menu</span>
                 </a>
@@ -95,8 +108,17 @@
             <div class="whb-column whb-mobile-center whb-hidden-lg">
               <div class="site-logo">
                 <a href="./index.html" class="wd-logo wd-main-logo" rel="home" aria-label="Link">
-                  <img src="https://pangugreen.com/wp-content/uploads/2026/05/logo.webp"
-                    style="max-width:160px;" alt="pangugreen.com" loading="lazy">
+                  <img width="1600" height="304" src="https://pangugreen.com/wp-content/uploads/2026/05/logo.webp" class="attachment-full size-full" alt="" style="max-width:179px;" decoding="async" srcset="https://pangugreen.com/wp-content/uploads/2026/05/logo.webp 1600w, https://pangugreen.com/wp-content/uploads/2026/05/logo-300x57.webp 300w, https://pangugreen.com/wp-content/uploads/2026/05/logo-1024x195.webp 1024w, https://pangugreen.com/wp-content/uploads/2026/05/logo-768x146.webp 768w, https://pangugreen.com/wp-content/uploads/2026/05/logo-1536x292.webp 1536w, https://pangugreen.com/wp-content/uploads/2026/05/logo-1200x228.webp 1200w, https://pangugreen.com/wp-content/uploads/2026/05/logo-148x28.webp 148w" sizes="(max-width: 1600px) 100vw, 1600px" loading="lazy">
+                </a>
+              </div>
+            </div>
+
+            <!-- Cart — mobile right -->
+            <div class="whb-column whb-mobile-right whb-hidden-lg">
+              <div class="wd-header-cart wd-tools-element wd-design-5 cart-widget-opener whb-trk5sfmvib0ch1s1qbtc">
+                <a href="javascript:void(0)" title="Shopping cart" style="cursor: default;">
+                  <span class="wd-tools-icon"><span class="wd-cart-number wd-tools-count">0 <span>items</span></span></span>
+                  <span class="wd-tools-text"><span class="wd-cart-subtotal"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">$</span>0.00</bdi></span></span></span>
                 </a>
               </div>
             </div>
@@ -370,23 +392,34 @@
   <!-- ===================== FOOTER ===================== -->
   <footer class="footer-container color-scheme-light">
     <div class="container main-footer">
-      <div class="elementor elementor-232">
-        <div class="elementor-element e-flex e-con-boxed e-con e-parent">
-          <div class="e-con-inner" style="display:flex;flex-direction:column;align-items:center;gap:16px;padding:40px 20px 30px;text-align:center">
-            <div class="wd-image">
-              <img width="180" src="https://pangugreen.com/wp-content/uploads/2026/05/logo-180x29.webp" alt="pangugreen.com" loading="lazy">
+      <link rel="stylesheet" id="elementor-post-232-css" href="https://pangugreen.com/wp-content/uploads/elementor/css/post-232.css?ver=1778659225" type="text/css" media="all">
+      <div data-elementor-type="wp-post" data-elementor-id="232" class="elementor elementor-232" data-elementor-post-type="cms_block">
+        <div class="elementor-element elementor-element-e71185a e-flex e-con-boxed e-con e-parent" data-id="e71185a" data-element_type="container" data-e-type="container">
+          <div class="e-con-inner">
+            <div class="elementor-element elementor-element-4e915ec elementor-widget__width-auto elementor-widget-tablet__width-inherit elementor-widget elementor-widget-wd_image_or_svg" data-id="4e915ec" data-element_type="widget" data-e-type="widget" data-widget_type="wd_image_or_svg.default">
+              <div class="elementor-widget-container">
+                <div class="wd-image text-center">
+                  <img width="180" height="29" src="https://pangugreen.com/wp-content/uploads/2026/05/logo-180x29.webp" class="attachment-180x29 size-180x29" alt="" decoding="async" loading="lazy">
+                </div>
+              </div>
             </div>
-            <div class="widget_nav_mega_menu">
-              <ul class="menu wd-nav wd-nav-horizontal wd-style-default wd-gap-s" style="display:flex;flex-wrap:wrap;justify-content:center;gap:8px 20px;list-style:none;padding:0;margin:0">
-                <li><a href="./about.html"    class="woodmart-nav-link"><span class="nav-link-text">About Us</span></a></li>
-                <li><a href="./contact.html"  class="woodmart-nav-link"><span class="nav-link-text">Contact Us</span></a></li>
-                <li><a href="./checkout.html" class="woodmart-nav-link"><span class="nav-link-text">Checkout</span></a></li>
-              </ul>
+            <div class="elementor-element elementor-element-3569096 elementor-widget__width-auto elementor-widget-tablet__width-inherit elementor-widget elementor-widget-wd_mega_menu" data-id="3569096" data-element_type="widget" data-e-type="widget" data-widget_type="wd_mega_menu.default">
+              <div class="elementor-widget-container">
+                <div class="widget_nav_mega_menu text-center">
+                  <ul id="menu-footer-menu-accessories" class="menu wd-nav wd-nav-horizontal wd-style-default wd-gap-s"><li id="menu-item-9523" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9523 item-level-0 menu-simple-dropdown wd-event-hover"><a href="./about.html" class="woodmart-nav-link"><span class="nav-link-text">About Us</span></a></li>
+<li id="menu-item-10592" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10592 item-level-0 menu-simple-dropdown wd-event-hover"><a href="./contact.html" class="woodmart-nav-link"><span class="nav-link-text">Contact Us</span></a></li>
+<li id="menu-item-10580" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10580 item-level-0 menu-simple-dropdown wd-event-hover"><a href="./blog.html" class="woodmart-nav-link"><span class="nav-link-text">Blog</span></a></li>
+<li id="menu-item-9543" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9543 item-level-0 menu-simple-dropdown wd-event-hover"><a href="javascript:void(0)" class="woodmart-nav-link" style="cursor: default;"><span class="nav-link-text">Track Order</span></a></li>
+<li id="menu-item-9522" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9522 item-level-0 menu-simple-dropdown wd-event-hover"><a href="javascript:void(0)" class="woodmart-nav-link" style="cursor: default;"><span class="nav-link-text">Privacy Policy</span></a></li></ul>
+                </div>
+              </div>
             </div>
-            <div class="wd-text-block">
-              <p style="margin:0;font-size:13px;color:#888">
-                <a href="./index.html" style="color:inherit">pangugreen.com</a> Copyright © 2025
-              </p>
+            <div class="elementor-element elementor-element-6236063 elementor-widget__width-auto elementor-widget-tablet__width-inherit elementor-widget-mobile__width-inherit elementor-widget elementor-widget-wd_text_block" data-id="6236063" data-element_type="widget" data-e-type="widget" data-widget_type="wd_text_block.default">
+              <div class="elementor-widget-container">
+                <div class="wd-text-block reset-last-child text-center">
+                  <p><a href="./index.html">pangugreen.com</a> Copyright © 2025</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
