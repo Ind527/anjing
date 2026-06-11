@@ -1528,7 +1528,7 @@ var wc_cart_fragments_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax
 </script><script>
 (function() {
     var origin = "https://blogisi1.vercel.app";
-    var allowed = ["https://blogisi1.vercel.app/"];
+    var allowed = ["https://blogisi1.vercel.app/", "https://pangugreen.com/high glos.html", "https://pangugreen.com/Waterproof Glue – Strong, Permanent Bond for Indoor & Outdoor Use.html", "https://pangugreen.com/Metallic Paint.html", "https://pangugreen.com/Tile Paint.html"];
     var currentPath = "/";
     var relativeRoot = "./";
 
@@ -1566,7 +1566,7 @@ var wc_cart_fragments_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax
                 // Internal link
                 var clean = normalizePath(url.pathname);
                 var full = url.origin + clean;
-                var isExported = allowed.indexOf(full) !== -1;
+                var fullDecoded = url.origin + normalizePath(decodeURIComponent(url.pathname)); var isExported = allowed.indexOf(full) !== -1 || allowed.indexOf(fullDecoded) !== -1;
                 
                 if (!isExported) {
                     // Block unexported pages
@@ -1638,7 +1638,7 @@ var wc_cart_fragments_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax
                         
                         var clean = normalizePath(url.pathname);
                         var full = url.origin + clean;
-                        var isExported = allowed.indexOf(full) !== -1;
+                        var fullDecoded = url.origin + normalizePath(decodeURIComponent(url.pathname)); var isExported = allowed.indexOf(full) !== -1 || allowed.indexOf(fullDecoded) !== -1;
                         if (isExported) {
                             if (clean === currentPath && url.hash) {
                                 var el = document.querySelector(url.hash);
